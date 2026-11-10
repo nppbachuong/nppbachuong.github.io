@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mangala Complex</title>
+<meta name="description" content="Mangala Complex, phường Tiền Phong, Bắc Ninh: căn hộ và shophouse, khoảng giá quỹ căn đặc biệt và công cụ tính khoản vay. Tư vấn: Quang Giang 0348 558 888.">
+<meta property="og:title" content="Mangala Complex">
+<meta property="og:description" content="Mangala Complex, phường Tiền Phong, Bắc Ninh: căn hộ và shophouse, khoảng giá quỹ căn đặc biệt và công cụ tính khoản vay. Tư vấn: Quang Giang 0348 558 888.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nppbachuong.github.io/mangala/">
+<meta property="og:image" content="https://nppbachuong.github.io/trangchinh/img/anh-2.jpg">
+<style>
+  :root{
+    --navy:#0f1d33; --navy-2:#162945; --cream:#f3ede2; --cream-2:#ebe2d2;
+    --ink:#1c1c1c; --ink-soft:#4a4740; --paper:#f5f1e8; --gold:#c9a24b; --gold-soft:#e4c87a;
+    --line:#d8cdb4; --line-dark:#2a3a56;
+    color-scheme: dark;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--navy);color:var(--paper);font-family:"Jost",system-ui,sans-serif;line-height:1.5}
+  h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:600;margin:0;text-wrap:balance}
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding-inline:clamp(20px,5vw,56px)}
+  .eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft);font-weight:600}
+
+  .hero{padding-block:72px 64px;border-bottom:1px solid var(--line-dark)}
+  .hero .back{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;color:#b9c2d6;text-decoration:none;margin-bottom:28px}
+  .hero .back:hover{color:var(--gold-soft)}
+  .hero h1{font-size:clamp(2.4rem,6vw,3.6rem);color:#fbf8f1;margin-top:10px}
+  .hero .sub{font-size:1.05rem;color:#c7cedd;max-width:48ch;margin-top:14px}
+  .hero .loc{margin-top:18px;color:#9aa5bc;font-size:.92rem}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:2px;font-size:.92rem;font-weight:600;text-decoration:none;border:1px solid transparent;cursor:pointer}
+  .btn-gold{background:var(--gold);color:#241a06}
+  .btn-gold:hover{background:var(--gold-soft)}
+  .btn-line{border-color:#4c5b7a;color:#e9ecf3;background:transparent}
+  .btn-line:hover{border-color:var(--gold-soft);color:var(--gold-soft)}
+
+  .section{background:var(--cream);color:var(--ink)}
+  .section .wrap{padding-block:52px}
+  .section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);color:var(--navy);margin-bottom:6px}
+  .section .lede{color:var(--ink-soft);max-width:62ch;margin-bottom:28px}
+
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+  .stat{background:var(--paper);padding:18px 16px}
+  .stat .n{font-family:"Playfair Display",serif;font-size:1.5rem;color:var(--navy);font-variant-numeric:tabular-nums}
+  .stat .l{font-size:.78rem;color:var(--ink-soft);margin-top:4px}
+
+  .amen-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:8px}
+  .amen{background:var(--paper);border:1px solid var(--line);padding:20px;min-width:0}
+  .amen .ic{width:30px;height:30px;color:var(--gold);margin-bottom:10px}
+  .amen h3{font-size:1.02rem;color:var(--navy)}
+  .amen p{font-size:.86rem;color:var(--ink-soft);margin-top:6px}
+
+  .type-table{width:100%;border-collapse:collapse;margin-top:8px;font-size:.92rem}
+  .type-table th,.type-table td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line)}
+  .type-table th{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft);font-weight:600}
+  .type-table td{color:var(--ink)}
+  .tbl-wrap{overflow-x:auto}
+
+  .pending{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;letter-spacing:.04em;color:#946f1f;background:#f3e3bd;border:1px solid #e0c683;padding:3px 9px;border-radius:999px;font-weight:600}
+
+  .note{background:#fbf7ee;border:1px solid var(--line);border-left:3px solid var(--gold);padding:16px 18px;font-size:.86rem;color:var(--ink-soft);margin-top:28px}
+  .note b{color:var(--ink)}
+
+  .contact{background:var(--navy-2);color:#eef1f7}
+  .contact .wrap{padding-block:48px;display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start}
+  .contact h2{color:#fbf8f1;font-size:1.5rem}
+  .contact p{color:#b9c2d6;font-size:.9rem;margin-top:8px;max-width:40ch}
+  .contact .who{display:flex;flex-direction:column;gap:4px;font-size:.92rem}
+  .contact .who b{color:#fbf8f1;font-family:"Playfair Display",serif;font-size:1.1rem;font-weight:600}
+  .copy-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .copy-btn{border:1px solid #4c5b7a;background:transparent;color:#e9ecf3;font-size:.8rem;padding:7px 12px;border-radius:2px;cursor:pointer;font-family:inherit}
+  .copy-btn:hover{border-color:var(--gold-soft);color:var(--gold-soft)}
+
+  @media (max-width:560px){ .contact .wrap{flex-direction:column} }
+  .calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;margin-top:8px}
+  .calc-in,.calc-out{background:var(--paper);border:1px solid var(--line);padding:22px;min-width:0;display:flex;flex-direction:column;gap:16px}
+  .fld{display:flex;flex-direction:column;gap:7px}
+  .fld label,.fld .lb{font-size:.8rem;font-weight:600;color:var(--navy)}
+  .fld select,.fld input[type=number]{font:inherit;font-size:.95rem;padding:10px 12px;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:2px;width:100%}
+  .rg{display:flex;align-items:center;gap:12px}
+  .rg input[type=range]{flex:1;accent-color:var(--gold);min-width:0}
+  .rg output{font-family:"Playfair Display",serif;font-size:1.15rem;color:var(--navy);min-width:7.5ch;text-align:right;font-variant-numeric:tabular-nums}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .seg{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}
+  .seg button{font:inherit;font-size:.86rem;padding:10px;border:0;background:#fff;color:var(--ink-soft);cursor:pointer}
+  .seg button[aria-pressed=true]{background:var(--navy);color:#fbf8f1}
+  .seg button:focus-visible,.rg input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .fine{font-size:.78rem;color:var(--ink-soft)}
+  .res{display:flex;justify-content:space-between;gap:12px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:10px;font-variant-numeric:tabular-nums}
+  .res span{font-size:.86rem;color:var(--ink-soft)}
+  .res b{font-family:"Playfair Display",serif;font-size:1.25rem;color:var(--navy);font-weight:600;text-align:right}
+  .res.hl b{color:var(--gold);font-size:1.55rem}
+  .range-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:22px}
+  .range-strip div{background:var(--paper);padding:14px 16px}
+  .range-strip b{display:block;font-family:"Playfair Display",serif;font-size:1.3rem;color:var(--navy);font-variant-numeric:tabular-nums}
+  .range-strip span{font-size:.78rem;color:var(--ink-soft)}
+  @media (max-width:760px){ .calc{grid-template-columns:1fr} }
+
+  .btn-zalo{background:#0068ff;color:#fff}
+  .btn-zalo:hover{background:#2b80ff}
+  .contact .cta-row{margin-top:20px}
+  .who .cert{font-size:.8rem;color:#9aa5bc;letter-spacing:.03em}
+  .ft{background:#0b1626;color:#8f9ab0;font-size:.8rem}
+  .ft .wrap{padding-block:22px;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;align-items:center}
+  .ft a{color:#c7cedd;text-decoration:none;border-bottom:1px dotted #4c5b7a}
+  .ft a:hover{color:var(--gold-soft)}
+  .pending{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;letter-spacing:.04em;color:#946f1f;background:#f3e3bd;border:1px solid #e0c683;padding:3px 9px;border-radius:999px;font-weight:600}
+  .src{font-size:.78rem;color:var(--ink-soft);margin-top:14px}
+  .src a{color:var(--ink-soft)}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px 28px;margin:0;padding:0}
+  .facts li{list-style:none;display:flex;gap:10px;font-size:.92rem;color:var(--ink);border-bottom:1px solid var(--line);padding:10px 0}
+  .facts li::before{content:"\2014";color:var(--gold);flex:0 0 auto}
+  .steps{counter-reset:s;display:grid;gap:12px;margin:8px 0 0;padding:0}
+  .steps li{list-style:none;counter-increment:s;display:flex;gap:14px;align-items:baseline;font-size:.9rem;color:var(--ink)}
+  .steps li::before{content:counter(s,decimal-leading-zero);font-family:"Playfair Display",serif;color:var(--gold);font-size:1.05rem;flex:0 0 auto}
+  @media (max-width:560px){ .hero{padding-block:52px 48px} .section .wrap{padding-block:40px} }
+
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script>
+/* Đo lường: Meta Pixel + Google Analytics 4 (luật CLAUDE.md mục 14). Chỉ chạy trên tên miền thật. */
+var LIVE = location.protocol !== "file:" && !/^(localhost|127(\.\d+){3}|192\.168(\.\d+){2}|\[::1\]|)$/.test(location.hostname);
+if (LIVE) { !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq.disablePushState = true;
+  fbq("init", "716490403350364"); fbq("track", "PageView"); }
+var GA_ID = "G-97SR4JPN3R";
+window.dataLayer = window.dataLayer || [];
+if (LIVE) { (function () { var s = document.createElement("script"); s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID; document.head.appendChild(s); })();
+  window.gtag = function () { dataLayer.push(arguments); }; gtag("js", new Date()); gtag("config", GA_ID); }
+var GA_EV = { Lead: "generate_lead", Contact: "contact" };
+function ga(ev, data) { if (window.gtag) gtag("event", GA_EV[ev] || ev, data || {}); }
+window.__sk = [];
+function track(ev, data) { window.__sk.push(ev + " " + JSON.stringify(data || {})); if (window.fbq) fbq("track", ev, data || {}); ga(ev, data); }
+function trackC(ev, data) { window.__sk.push(ev + " " + JSON.stringify(data || {})); if (window.fbq) fbq("trackCustom", ev, data || {}); ga(ev, data); }
+document.addEventListener("click", function (e) { var a = e.target.closest && e.target.closest("a[href]"); if (!a) return;
+  var h = a.getAttribute("href"); if (/^tel:/.test(h)) track("Contact", { method: "call" }); else if (/zalo\.me/.test(h)) track("Contact", { method: "zalo" }); });
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=716490403350364&amp;ev=PageView&amp;noscript=1"></noscript>
+</head>
+<body>
+<section class="hero">
+  <div class="wrap">
+    <a class="back" href="https://nppbachuong.github.io/trangchinh/" target="_blank" rel="noopener">&larr; Chọn Nhà Cùng Quang Giang</a>
+    <div class="eyebrow">Đang tư vấn · Phường Tiền Phong, Bắc Ninh</div>
+    <h1>Mangala Complex</h1>
+    <p class="sub">Industrial Hub Living &mdash; tổ hợp căn hộ và shophouse khép kín, hướng tới chuyên gia, kỹ sư làm việc trong các khu công nghiệp quanh vùng.</p>
+    <p class="loc">Song Khê &ndash; Nội Hoàng, phường Tiền Phong &middot; Chủ đầu tư Abey Holdings &middot; D-Holdings phân phối</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="#khoang-gia">Xem khoảng giá, tính khoản vay</a>
+      <a class="btn btn-line" href="tel:+84348558888">Gọi 0348 558 888</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="eyebrow">Quy mô</div>
+    <h2>Một tổ hợp, nhiều dòng sản phẩm</h2>
+    <p class="lede">Căn hộ cao tầng cho ở và cho thuê, shophouse dọc một trục phố đi bộ ven kênh, hướng tới cộng đồng chuyên gia nước ngoài đang làm việc tại các khu công nghiệp Bắc Ninh.</p>
+    <div class="stat-grid">
+      <div class="stat"><div class="n">28</div><div class="l">tầng tháp căn hộ</div></div>
+      <div class="stat"><div class="n">667</div><div class="l">căn hộ toàn dự án</div></div>
+      <div class="stat"><div class="n">700m</div><div class="l">trục kênh &ndash; phố đi bộ</div></div>
+      <div class="stat"><div class="n">60</div><div class="l">shophouse 7 tầng, hai mặt tiền</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="eyebrow">Tiện ích</div>
+    <h2>Sống, làm việc và giải trí trong một khuôn viên</h2>
+    <div class="amen-grid">
+      <div class="amen">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 3"/></svg>
+        <h3>Bể bơi trong nhà, tầng 5</h3>
+        <p>Các căn hộ phía trên nhìn xuống bể bơi, dùng được quanh năm.</p>
+      </div>
+      <div class="amen">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        <h3>Phố đi bộ ven kênh</h3>
+        <p>Trục kênh dài 700m, rộng 16m, shophouse 7 tầng hai mặt tiền dọc hai bên.</p>
+      </div>
+      <div class="amen">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="7" width="16" height="12" rx="1"/><path d="M8 7V5a4 4 0 018 0v2"/></svg>
+        <h3>Nhà để xe nổi ba tầng</h3>
+        <p>Có lối đi có mái che tới khu căn hộ.</p>
+      </div>
+      <div class="amen">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V10l8-6 8 6v10"/><path d="M9 20v-6h6v6"/></svg>
+        <h3>Nội thất liền tường chuẩn Ruby</h3>
+        <p>Bàn giao nội thất liền tường theo tiêu chuẩn Ruby của chủ đầu tư.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="eyebrow">Sản phẩm</div>
+    <h2>Cơ cấu căn hộ mỗi tầng</h2>
+    <p class="lede">Bốn loại căn trên mỗi sàn, căn hai phòng ngủ chiếm tỷ trọng lớn nhất.</p>
+    <div class="tbl-wrap">
+      <table class="type-table">
+        <thead><tr><th>Loại căn</th><th>Diện tích tham khảo</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>Studio</td><td>33,8 &ndash; 38,9 m²</td><td></td></tr>
+          <tr><td>1 phòng ngủ +</td><td>khoảng 51,6 m²</td><td></td></tr>
+          <tr><td>2 phòng ngủ</td><td>59,8 &ndash; 66,8 m²</td><td><span class="pending">Tỷ trọng lớn nhất mỗi tầng</span></td></tr>
+          <tr><td>3 phòng ngủ</td><td>81,7 &ndash; 94,1 m²</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note"><b>Mốc bàn giao và chính sách chính thức đang chờ chủ đầu tư công bố.</b> Khoảng giá tham khảo và công cụ tính khoản vay ở mục ngay dưới.</div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--paper)" id="khoang-gia">
+  <div class="wrap">
+    <div class="eyebrow">Khoảng giá &middot; tính khoản vay</div>
+    <h2>Quỹ căn đặc biệt: khoảng 1,23 tỷ đến 3,93 tỷ</h2>
+    <p class="lede">Khoảng giá tham khảo của quỹ căn đặc biệt tầng 12A, 15A, 28 do chủ đầu tư công bố cho đại lý. Số căn và chương trình có thời hạn, anh Giang báo căn còn lại và mức giá hiện hành khi tư vấn. Giá từng căn thay đổi theo vị trí và cách thanh toán, anh Giang gửi giá chính xác khi tư vấn.</p>
+    <div class="range-strip">
+      <div><b>~1,23 &ndash; 1,69 tỷ</b><span>Studio 33,82 &ndash; 38,92 m²</span></div>
+      <div><b>~1,86 &ndash; 2,20 tỷ</b><span>1PN+ 51,64 m²</span></div>
+      <div><b>~2,09 &ndash; 2,76 tỷ</b><span>2PN 59,83 &ndash; 66,8 m²</span></div>
+      <div><b>~2,95 &ndash; 3,93 tỷ</b><span>3PN 81,67 &ndash; 94,1 m²</span></div>
+    </div>
+    <div class="calc">
+      <div class="calc-in">
+        <div class="fld"><label for="mc-unit">Loại căn</label><select id="mc-unit"></select></div>
+        <div class="fld"><label for="mc-price">Giá căn (kéo trong khoảng của loại căn)</label>
+          <div class="rg"><input id="mc-price" type="range" step="0.001"><output id="mc-price-out" for="mc-price">-</output></div>
+          <p class="fine" id="mc-price-hint"></p></div>
+        <div class="fld"><span class="lb">Cách thanh toán</span>
+          <div class="seg" role="group" aria-label="Cách thanh toán">
+            <button type="button" data-plan="cash" aria-pressed="false">Không vay</button>
+            <button type="button" data-plan="loan" aria-pressed="true">Vay ngân hàng</button>
+          </div></div>
+        <div id="mc-loan">
+          <div class="fld"><label for="mc-ltv">Tỷ lệ vay</label><div class="rg"><input id="mc-ltv" type="range" min="10" max="70" step="5" value="70"><output id="mc-ltv-out" for="mc-ltv">70%</output></div></div>
+          <div class="two" style="margin-top:12px">
+            <div class="fld"><label for="mc-rate">Lãi suất (%/năm)</label><input id="mc-rate" type="number" min="0" max="20" step="0.1" value="12" inputmode="decimal"></div>
+            <div class="fld"><label for="mc-years">Thời hạn vay (năm)</label><input id="mc-years" type="number" min="1" max="35" step="1" value="30" inputmode="numeric"></div>
+          </div>
+          <p class="fine" style="margin-top:10px">Mặc định vay 70%, 30 năm, lãi 12%/năm là mức giả định để minh họa. Anh/chị có thư chào lãi suất của ngân hàng thì nhập vào ô lãi suất. Phương án vay có thể kèm hỗ trợ lãi suất của chủ đầu tư theo từng đợt, anh Giang báo khi tư vấn.</p>
+        </div>
+      </div>
+      <div class="calc-out">
+        <div class="res"><span>Giá căn tạm tính</span><b id="mc-o-price">-</b></div>
+        <div class="res"><span>Quy ra mỗi m²</span><b id="mc-o-m2">-</b></div>
+        <div class="res" id="mc-r-own"><span>Vốn tự có cần chuẩn bị</span><b id="mc-o-own">-</b></div>
+        <div class="res" id="mc-r-loan"><span>Số tiền vay</span><b id="mc-o-loan">-</b></div>
+        <div class="res hl" id="mc-r-month"><span>Trả góp ước tính mỗi tháng<br><span class="fine">gốc + lãi chia đều, lãi giữ nguyên theo giả định; thực tế thay đổi theo ngân hàng</span></span><b id="mc-o-month">-</b></div>
+        <p class="fine">Bảng tính minh họa theo các mức anh/chị đang chọn, không phải báo giá căn cụ thể hay cam kết cho vay. Các khoản đã gồm và chưa gồm trong giá (thuế VAT, kinh phí bảo trì…) anh Giang gửi theo thông báo chính thức khi tư vấn.</p>
+        <a class="btn btn-gold" href="#lien-he" style="align-self:flex-start" onclick="trackC('BamNhanGia',{du_an:'Mangala'})">Nhận giá căn cụ thể</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var U=[["Studio 33,82 m²",33.82,1.226,1.419],["Studio 38,92 m²",38.92,1.488,1.688],["1PN+ 51,64 m²",51.64,1.857,2.198],
+         ["2PN 59,83 m² (nội khu)",59.83,2.094,2.446],["2PN 66,8 m² (ngoại khu)",66.8,2.323,2.762],
+         ["3PN 81,67 m²",81.67,2.947,3.377],["3PN 89,91 m²",89.91,3.176,3.718],["3PN 94,1 m²",94.1,3.463,3.930]];
+  var $=function(s){return document.getElementById(s)}, plan="loan";
+  var ty=function(v){return v.toLocaleString("vi-VN",{minimumFractionDigits:2,maximumFractionDigits:2})+" tỷ"};
+  var tr=function(v){return Math.round(v).toLocaleString("vi-VN")+" triệu"};
+  U.forEach(function(u,i){var o=document.createElement("option");o.value=i;o.textContent=u[0];$("mc-unit").appendChild(o)});
+  $("mc-unit").value=3;
+  function setUnit(){var u=U[+$("mc-unit").value];$("mc-price").min=u[2];$("mc-price").max=u[3];$("mc-price").value=u[2];
+    $("mc-price-hint").textContent="Khoảng giá loại căn này: "+ty(u[2])+" – "+ty(u[3])+". Mức thấp hay cao tùy vị trí căn và cách thanh toán.";calc()}
+  function calc(){var u=U[+$("mc-unit").value],p=parseFloat($("mc-price").value);
+    $("mc-price-out").textContent=ty(p);$("mc-o-price").textContent=ty(p);$("mc-o-m2").textContent="≈ "+(p*1000/u[1]).toLocaleString("vi-VN",{maximumFractionDigits:1})+" triệu/m²";
+    var ltv=+$("mc-ltv").value/100;$("mc-ltv-out").textContent=Math.round(ltv*100)+"%";
+    var loan=plan==="loan";$("mc-loan").hidden=!loan;["mc-r-loan","mc-r-month"].forEach(function(id){$(id).hidden=!loan});
+    if(!loan){$("mc-o-own").textContent=ty(p);return}
+    var L=p*ltv*1000,r=Math.max(0,parseFloat($("mc-rate").value)||0)/1200,n=Math.max(1,Math.round(parseFloat($("mc-years").value)||30))*12;
+    var m=r>0?L*r/(1-Math.pow(1+r,-n)):L/n;
+    $("mc-o-own").textContent=ty(p*(1-ltv));$("mc-o-loan").textContent=ty(p*ltv);$("mc-o-month").textContent="≈ "+tr(m)}
+  document.querySelectorAll("#khoang-gia .seg button").forEach(function(b){b.addEventListener("click",function(){plan=b.dataset.plan;
+    document.querySelectorAll("#khoang-gia .seg button").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});calc()})});
+  $("mc-unit").addEventListener("change",setUnit);["mc-price","mc-ltv","mc-rate","mc-years"].forEach(function(id){$(id).addEventListener("input",calc)});
+  setUnit();
+})();
+</script>
+
+<section class="contact" id="lien-he">
+  <div class="wrap">
+    <div>
+      <h2>Đăng ký nhận thông tin đợt mở bán</h2>
+      <p>Để lại liên hệ để nhận bảng giá và chính sách chính thức ngay khi chủ đầu tư công bố.</p>
+      <div class="cta-row">
+        <a class="btn btn-zalo" href="https://zalo.me/0348558888" target="_blank" rel="noopener">Nhắn Zalo</a>
+        <a class="btn btn-line" href="tel:+84348558888">Gọi 0348 558 888</a>
+      </div>
+    </div>
+    <div class="who">
+      <b>Quang Giang</b>
+      <span>Chuyên viên tư vấn lựa chọn bất động sản</span>
+      <span class="cert">Chứng chỉ môi giới BAN-0716 · Sở Xây dựng Bắc Ninh</span>
+      <div class="copy-row" style="margin-top:10px">
+        <span>0348 558 888</span>
+        <button class="copy-btn" onclick="copyPhone(this)">Sao chép số</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <a href="https://nppbachuong.github.io/trangchinh/" target="_blank" rel="noopener">&larr; Trang chính Chọn Nhà Cùng Quang Giang</a>
+    <span>Thông tin mang tính tham khảo. Giá, chính sách và hồ sơ pháp lý chính thức theo chủ đầu tư và cơ quan nhà nước.</span>
+  </div>
+</footer>
+
+<script>
+function copyPhone(btn){
+  var t = btn.previousElementSibling.textContent;
+  var done = function(){ var o = btn.textContent; btn.textContent = 'Đã chép'; setTimeout(function(){ btn.textContent = o; }, 1600); };
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(done).catch(function(){
+      var r = document.createRange(); r.selectNode(btn.previousElementSibling);
+      var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    });
+  }
+}
+</script>
+
+</body>
+</html>

@@ -453,7 +453,6 @@ document.addEventListener("click", function (e) { var a = e.target.closest && e.
           <select id="h-group" name="group" class="js-groupsel"></select></div>
       </div>
       <div class="field"><label for="h-unit">Loại căn hộ anh/chị cần</label><select id="h-unit" name="unit" class="js-unitsel"></select></div>
-      <label class="consent"><input type="checkbox" name="consent" required><span>Tôi đồng ý để chuyên viên Nguyễn Quang Giang (D-Holdings) lưu họ tên, số điện thoại, nhu cầu, nhóm đối tượng, loại căn, ghi chú, kết quả kiểm tra và bảng tính tôi vừa làm trên trang, trên Google (Sheets, Gmail) và máy tính của chuyên viên, để liên hệ tư vấn dự án Cát Tường Smart City. Dữ liệu lưu tối đa 12 tháng kể từ lần liên hệ cuối, không bán và không chia sẻ cho bên khác. Tôi có thể rút lại đồng ý hoặc yêu cầu xóa bất kỳ lúc nào bằng cách nhắn Zalo 0348 558 888. <a href="chinh-sach-bao-mat.html" target="_blank" rel="noopener">Chính sách bảo mật</a></span></label>
       <button class="btn btn-red" type="submit">Gửi thông tin nhờ tư vấn</button>
       <p class="form-msg" role="status"></p>
       <p class="fine">Đây không phải đơn mua: đơn Mẫu 01 nộp cho chủ đầu tư.</p>
@@ -741,7 +740,6 @@ document.addEventListener("click", function (e) { var a = e.target.closest && e.
       </div>
       <div class="field"><label for="f-unit">Loại căn hộ anh/chị cần</label><select id="f-unit" name="unit" class="js-unitsel"></select></div>
       <div class="field"><label for="f-note">Ghi chú (không bắt buộc)</label><input id="f-note" name="note" placeholder="vd: quan tâm căn 3 ngủ"></div>
-      <label class="consent"><input type="checkbox" name="consent" required><span>Tôi đồng ý để chuyên viên Nguyễn Quang Giang (D-Holdings) lưu họ tên, số điện thoại, nhu cầu, nhóm đối tượng, loại căn, ghi chú, kết quả kiểm tra và bảng tính tôi vừa làm trên trang, trên Google (Sheets, Gmail) và máy tính của chuyên viên, để liên hệ tư vấn dự án Cát Tường Smart City. Dữ liệu lưu tối đa 12 tháng kể từ lần liên hệ cuối, không bán và không chia sẻ cho bên khác. Tôi có thể rút lại đồng ý hoặc yêu cầu xóa bất kỳ lúc nào bằng cách nhắn Zalo 0348 558 888. <a href="chinh-sach-bao-mat.html" target="_blank" rel="noopener">Chính sách bảo mật</a></span></label>
       <button class="btn btn-red" type="submit">Gửi thông tin nhờ tư vấn</button>
       <p class="form-msg" role="status"></p>
       <p class="fine" style="color:var(--muted)">Đây không phải đơn mua: đơn Mẫu 01 nộp cho chủ đầu tư.</p>
@@ -1078,7 +1076,7 @@ $$(".js-lead").forEach(function (f) {
     var data = {
       project: PROJECT, name: name, phone: phone, need: f.elements["need"] ? f.elements["need"].value : "", group: f.elements["group"] && f.elements["group"].value ? groupLabel(f.elements["group"].value) : qGroup.value ? groupLabel(qGroup.value) : "",
       unit: (function () { var s = f.elements["unit"]; if (!s || s.value === "") return "Chưa chọn"; var u = UNITS[+s.value]; return "Căn " + u.name + " " + m2(u.tt, u.ttMax) + " m²"; })(),
-      note: traLoiKem(f.elements["note"] ? f.elements["note"].value.trim() : ""), sale: saleCode, saleName: sale ? sale.name : "", form: f.dataset.form + " · đã tích đồng ý lưu dữ liệu",
+      note: traLoiKem(f.elements["note"] ? f.elements["note"].value.trim() : ""), sale: saleCode, saleName: sale ? sale.name : "", form: f.dataset.form,
       utm_source: NGUON.src, utm_campaign: NGUON.camp, page: NGUON.page
     };
     if (!LEAD_ENDPOINT) { return show("info", "Anh/chị gọi hoặc nhắn Zalo " + prettyPhone(contact.phone) + " để được tư vấn ngay."); }

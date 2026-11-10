@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cho thuê nhà, mặt bằng | Chọn Nhà Cùng Quang Giang</title>
+<meta name="description" content="Gửi nhu cầu thuê hoặc thông tin tài sản cho thuê: chung cư, nhà trọ, nhà phố, cửa hàng, biệt thự, nhà xưởng quanh Bắc Ninh, Bắc Giang. Quang Giang gọi lại tư vấn.">
+<meta property="og:title" content="Cho thuê nhà, mặt bằng – Chọn Nhà Cùng Quang Giang">
+<meta property="og:description" content="Cần thuê nhà hay có nhà cần người thuê? Để lại thông tin, Quang Giang gọi lại.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0f1d33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f1d33; --navy-2:#162945; --paper:#f5f1e8; --cream:#f3ede2; --ink:#1c1c1c; --ink-soft:#4a4740;
+    --gold:#c9a24b; --gold-soft:#e4c87a; --line:#d8cdb4; --ok:#1f7a4d; --err:#b3261e; --zalo:#0068ff;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:"Jost",system-ui,sans-serif;line-height:1.55;-webkit-text-size-adjust:100%}
+  h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:600;margin:0;text-wrap:balance}
+  a{color:inherit}
+  .wrap{max-width:980px;margin:0 auto;padding-inline:clamp(16px,5vw,48px)}
+  .eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft);font-weight:600}
+
+  .top{background:var(--navy);color:#e9ecf3}
+  .top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px}
+  .brand{text-decoration:none;font-family:"Playfair Display",serif;font-size:1.05rem;color:#fbf8f1}
+  .brand small{display:block;font-family:"Jost",sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft)}
+  .top .call{font-weight:600;text-decoration:none;color:var(--gold-soft);white-space:nowrap}
+
+  .hero{background:var(--navy);color:#fbf8f1;padding-block:28px 56px}
+  .hero h1{font-size:clamp(1.9rem,6vw,3rem);margin-top:10px}
+  .hero p{color:#c7cedd;max-width:56ch;margin:14px 0 0;font-size:1.02rem}
+  .types{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;padding:0;list-style:none}
+  .types li{border:1px solid #3a4b6b;border-radius:999px;padding:5px 12px;font-size:.85rem;color:#e9ecf3}
+
+  .choose{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:-30px}
+  .choose button{all:unset;box-sizing:border-box;cursor:pointer;background:#fff;border:2px solid var(--line);border-radius:6px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:4px;box-shadow:0 8px 24px rgba(15,29,51,.08)}
+  .choose button b{font-family:"Playfair Display",serif;font-size:1.2rem;color:var(--navy)}
+  .choose button span{font-size:.86rem;color:var(--ink-soft)}
+  .choose button[aria-selected=true]{border-color:var(--gold);background:#fffaf0}
+  .choose button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+  .card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:clamp(18px,4vw,30px);margin-block:18px 40px}
+  .card h2{font-size:clamp(1.35rem,4vw,1.8rem);color:var(--navy)}
+  .card .lead{color:var(--ink-soft);margin:6px 0 20px;font-size:.95rem}
+  form{display:grid;gap:16px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .f{display:flex;flex-direction:column;gap:6px;min-width:0}
+  .f label,.f .lb{font-weight:600;font-size:.9rem;color:var(--navy)}
+  .f .req{color:var(--err)}
+  .f input[type=text],.f input[type=tel],.f textarea{font:inherit;font-size:1rem;padding:12px 13px;border:1px solid var(--line);border-radius:4px;background:#fffdf8;color:var(--ink);width:100%}
+  .f textarea{min-height:84px;resize:vertical}
+  .f input:focus,.f textarea:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
+  .hint{font-size:.8rem;color:var(--ink-soft)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips label{position:relative;cursor:pointer}
+  .chips input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+  .chips span{display:inline-block;padding:9px 14px;border:1px solid var(--line);border-radius:999px;font-size:.92rem;background:#fffdf8;transition:background .12s,border-color .12s}
+  .chips input:checked+span{background:var(--navy);border-color:var(--navy);color:#fbf8f1}
+  .chips input:focus-visible+span{outline:2px solid var(--gold);outline-offset:2px}
+
+  .drop{border:2px dashed var(--line);border-radius:6px;padding:18px;text-align:center;background:#fffdf8;cursor:pointer}
+  .drop:hover,.drop.on{border-color:var(--gold);background:#fffaf0}
+  .drop b{color:var(--navy)}
+  .thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:8px;margin-top:10px}
+  .th{position:relative;aspect-ratio:1;border-radius:4px;overflow:hidden;background:#eee6d6;border:1px solid var(--line)}
+  .th img,.th video{width:100%;height:100%;object-fit:cover;display:block}
+  .th .vid{position:absolute;left:4px;bottom:4px;background:rgba(15,29,51,.8);color:#fff;font-size:.68rem;padding:1px 6px;border-radius:3px}
+  .th button{position:absolute;top:3px;right:3px;width:24px;height:24px;border-radius:50%;border:0;background:rgba(15,29,51,.85);color:#fff;cursor:pointer;font-size:14px;line-height:24px;padding:0}
+
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--ink-soft)}
+  .consent input{width:20px;height:20px;margin-top:2px;flex:0 0 auto;accent-color:var(--navy)}
+  .btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:14px 22px;border-radius:4px;font:inherit;font-weight:600;font-size:1rem;text-decoration:none;border:0;cursor:pointer}
+  .btn-gold{background:var(--gold);color:#241a06}
+  .btn-gold:hover{background:var(--gold-soft)}
+  .btn-gold[disabled]{opacity:.6;cursor:wait}
+  .btn-zalo{background:var(--zalo);color:#fff}
+  .btn-line{background:transparent;border:1px solid var(--navy);color:var(--navy)}
+  .msg{border-radius:4px;padding:14px 16px;font-size:.95rem;display:none}
+  .msg.show{display:block}
+  .msg.ok{background:#e8f4ec;border:1px solid #b9dcc6;color:#174d33}
+  .msg.err{background:#fbeceb;border:1px solid #efc4c1;color:#7a1c16}
+  .msg.wait{background:#f3efe4;border:1px solid var(--line);color:var(--ink-soft)}
+  .bar{height:6px;background:#e7dfcd;border-radius:3px;overflow:hidden;margin-top:8px}
+  .bar i{display:block;height:100%;width:0;background:var(--gold);transition:width .2s}
+
+  .how{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:40px;padding:0;list-style:none;counter-reset:s}
+  .how li{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px;counter-increment:s;font-size:.9rem;color:var(--ink-soft)}
+  .how li::before{content:counter(s,decimal-leading-zero);display:block;font-family:"Playfair Display",serif;color:var(--gold);font-size:1.3rem}
+  .how b{color:var(--navy)}
+
+  footer{background:var(--navy-2);color:#b9c2d6;font-size:.88rem}
+  footer .wrap{padding-block:28px;display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between}
+  footer b{color:#fbf8f1;font-family:"Playfair Display",serif;font-size:1.05rem}
+  footer a{color:#e9ecf3}
+  footer .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+
+  [hidden]{display:none!important}
+  @media (max-width:640px){ .two,.how{grid-template-columns:1fr} .choose{gap:10px} .choose button{padding:14px} .choose button b{font-size:1.05rem} }
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+</style>
+<script>
+/* Đo lường: Meta Pixel + Google Analytics 4, giống landing Vân Trung, Parc Ville, Nam Ngạn. Chỉ chạy trên tên miền thật. */
+var LIVE = location.protocol !== "file:" && !/^(localhost|127(\.\d+){3}|192\.168(\.\d+){2}|\[::1\]|)$/.test(location.hostname);
+if (LIVE) { !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq.disablePushState = true; /* bấm #can-thue / #cho-thue không tính thêm PageView */
+  fbq("init", "716490403350364"); fbq("track", "PageView"); }
+/* Google Analytics 4: tài sản "Landing BĐS Quang Giang" (tài khoản Bachuong.com, nppbachuong) */
+var GA_ID = "G-97SR4JPN3R";
+window.dataLayer = window.dataLayer || [];
+if (LIVE) { (function () { var s = document.createElement("script"); s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID; document.head.appendChild(s); })();
+  window.gtag = function () { dataLayer.push(arguments); }; gtag("js", new Date()); gtag("config", GA_ID); }
+var GA_EV = { Lead: "generate_lead", Contact: "contact" };
+function ga(ev, data) { if (window.gtag) gtag("event", GA_EV[ev] || ev, data || {}); }
+window.__sk = [];  /* nhật ký sự kiện để soát khi xem thử trên máy */
+function track(ev, data) { window.__sk.push(ev + " " + JSON.stringify(data || {})); if (window.fbq) fbq("track", ev, data || {}); ga(ev, data); }
+function trackC(ev, data) { window.__sk.push(ev + " " + JSON.stringify(data || {})); if (window.fbq) fbq("trackCustom", ev, data || {}); ga(ev, data); }
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=716490403350364&amp;ev=PageView&amp;noscript=1"></noscript>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="https://claude.ai/artifact/LgsbAQ2oJHgtaDzQLD2gFJ" target="_blank" rel="noopener">Chọn Nhà Cùng Quang Giang<small>Cho thuê nhà · mặt bằng</small></a>
+  <a class="call" href="tel:+84348558888">0348 558 888</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Bắc Ninh (gồm Bắc Giang cũ)</div>
+  <h1>Cần thuê nhà, hay có nhà cần người thuê?</h1>
+  <p>Để lại thông tin, Giang gọi lại để hỏi rõ nhu cầu rồi tìm nhà hoặc tìm người thuê phù hợp. Giang liên hệ chủ nhà để xác nhận nhà còn trống trước khi hẹn đi xem.</p>
+  <ul class="types"><li>Chung cư</li><li>Nhà trọ</li><li>Nhà phố</li><li>Cửa hàng</li><li>Biệt thự</li><li>Nhà xưởng</li></ul>
+</div></section>
+
+<main class="wrap">
+  <div class="choose" role="tablist" aria-label="Chọn loại thông tin">
+    <button type="button" role="tab" id="t-can" aria-selected="true" aria-controls="p-can"><b>Tôi cần thuê</b><span>Gửi nhu cầu, Giang tìm nhà cho bạn</span></button>
+    <button type="button" role="tab" id="t-co" aria-selected="false" aria-controls="p-co"><b>Tôi có nhà cho thuê</b><span>Gửi tài sản, Giang tìm người thuê</span></button>
+  </div>
+
+  <!-- KHÁCH CẦN THUÊ -->
+  <section class="card" id="p-can" role="tabpanel" aria-labelledby="t-can">
+    <h2 id="can-thue">Gửi nhu cầu thuê</h2>
+    <p class="lead">Điền vài dòng, mất khoảng 1 phút. Chỉ họ tên và số điện thoại là bắt buộc.</p>
+    <form id="f-can" novalidate>
+      <div class="two">
+        <div class="f"><label for="can-name">Họ tên <span class="req">*</span></label><input type="text" id="can-name" name="name" autocomplete="name" required></div>
+        <div class="f"><label for="can-phone">Số điện thoại <span class="req">*</span></label><input type="tel" id="can-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="09xx xxx xxx" required></div>
+      </div>
+      <div class="f"><span class="lb">Bạn cần thuê</span>
+        <div class="chips" role="group" aria-label="Loại nhà cần thuê">
+          <label><input type="checkbox" name="types" value="Chung cư"><span>Chung cư</span></label>
+          <label><input type="checkbox" name="types" value="Nhà trọ"><span>Nhà trọ</span></label>
+          <label><input type="checkbox" name="types" value="Nhà phố"><span>Nhà phố</span></label>
+          <label><input type="checkbox" name="types" value="Cửa hàng"><span>Cửa hàng</span></label>
+          <label><input type="checkbox" name="types" value="Biệt thự"><span>Biệt thự</span></label>
+          <label><input type="checkbox" name="types" value="Nhà xưởng"><span>Nhà xưởng</span></label>
+          <label><input type="checkbox" name="types" value="Khác"><span>Khác</span></label>
+        </div>
+        <span class="hint">Chọn được nhiều loại.</span>
+      </div>
+      <div class="two">
+        <div class="f"><label for="can-area">Khu vực muốn thuê</label><input type="text" id="can-area" name="area" placeholder="Ví dụ: gần KCN Vân Trung, phường Nếnh"></div>
+        <div class="f"><label for="can-size">Diện tích mong muốn</label><input type="text" id="can-size" name="size" placeholder="Ví dụ: 30–40 m², 2 phòng ngủ"></div>
+      </div>
+      <div class="f"><label for="can-note">Ghi chú thêm <span class="hint">(không bắt buộc)</span></label><textarea id="can-note" name="note" placeholder="Ngân sách mỗi tháng, ngày muốn vào ở, số người ở…"></textarea><span class="hint">Không nhập số căn cước, số tài khoản hay mật khẩu.</span></div>
+      <label class="consent"><input type="checkbox" name="consent" required><span>Tôi đồng ý để Chọn Nhà Cùng Quang Giang (Nguyễn Quang Giang) lưu họ tên, số điện thoại và nhu cầu thuê nhà của tôi trên dịch vụ lưu trữ Google để liên hệ tư vấn thuê nhà. Dữ liệu lưu tối đa 12 tháng kể từ lần liên hệ cuối và không chia sẻ cho bên khác. Tôi có thể rút lại đồng ý hoặc yêu cầu xóa bất kỳ lúc nào bằng cách nhắn Zalo 0348 558 888. <a href="chinh-sach-bao-mat.html" target="_blank" rel="noopener">Chính sách bảo mật</a></span></label>
+      <div class="msg" role="status" aria-live="polite"></div>
+      <button class="btn btn-gold" type="submit">Gửi nhu cầu thuê</button>
+    </form>
+  </section>
+
+  <!-- CHỦ CÓ TÀI SẢN CHO THUÊ -->
+  <section class="card" id="p-co" role="tabpanel" aria-labelledby="t-co" hidden>
+    <h2 id="cho-thue">Gửi tài sản cần cho thuê</h2>
+    <p class="lead">Gửi thông tin và ảnh, video tài sản. Giang gọi lại để hỏi giá, điều kiện cho thuê rồi mới giới thiệu cho khách.</p>
+    <form id="f-co" novalidate>
+      <div class="two">
+        <div class="f"><label for="co-name">Họ tên <span class="req">*</span></label><input type="text" id="co-name" name="name" autocomplete="name" required></div>
+        <div class="f"><label for="co-phone">Số điện thoại <span class="req">*</span></label><input type="tel" id="co-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="09xx xxx xxx" required></div>
+      </div>
+      <div class="f"><span class="lb">Loại tài sản</span>
+        <div class="chips" role="group" aria-label="Loại tài sản cho thuê">
+          <label><input type="checkbox" name="types" value="Chung cư"><span>Chung cư</span></label>
+          <label><input type="checkbox" name="types" value="Nhà trọ"><span>Nhà trọ</span></label>
+          <label><input type="checkbox" name="types" value="Nhà phố"><span>Nhà phố</span></label>
+          <label><input type="checkbox" name="types" value="Cửa hàng"><span>Cửa hàng</span></label>
+          <label><input type="checkbox" name="types" value="Biệt thự"><span>Biệt thự</span></label>
+          <label><input type="checkbox" name="types" value="Nhà xưởng"><span>Nhà xưởng</span></label>
+          <label><input type="checkbox" name="types" value="Khác"><span>Khác</span></label>
+        </div>
+      </div>
+      <div class="two">
+        <div class="f"><label for="co-area">Khu vực tài sản</label><input type="text" id="co-area" name="area" placeholder="Ví dụ: đường Lê Lợi, phường Bắc Giang"></div>
+        <div class="f"><label for="co-size">Diện tích</label><input type="text" id="co-size" name="size" placeholder="Ví dụ: 80 m², 4 tầng"></div>
+      </div>
+      <div class="f"><label for="co-note">Ghi chú thêm <span class="hint">(không bắt buộc)</span></label><textarea id="co-note" name="note" placeholder="Giá cho thuê mong muốn, ngày trống, nội thất, chỗ để xe…"></textarea><span class="hint">Không nhập số căn cước, số tài khoản hay mật khẩu.</span></div>
+      <div class="f"><span class="lb">Ảnh, video tài sản</span>
+        <div class="drop" id="drop" tabindex="0" role="button" aria-label="Chọn ảnh hoặc video tài sản">
+          <b>Bấm để chọn ảnh, video</b><br><span class="hint">Tối đa 10 ảnh và 2 video (MP4, MOV), mỗi video dưới 25 MB. Ảnh tự thu nhỏ cho nhanh. Video dài hơn, anh/chị gửi qua Zalo 0348 558 888.<br>Chỉ gửi ảnh, video chính nhà bạn, không có người, biển số xe hay giấy tờ cá nhân trong ảnh.</span>
+        </div>
+        <input type="file" id="files" accept="image/*,video/mp4,video/quicktime" multiple hidden>
+        <div class="thumbs" id="thumbs"></div>
+      </div>
+      <label class="consent"><input type="checkbox" name="consent" required><span>Tôi đồng ý để Chọn Nhà Cùng Quang Giang (Nguyễn Quang Giang) lưu họ tên, số điện thoại, thông tin, ảnh và video tài sản của tôi trên dịch vụ lưu trữ Google để liên hệ và giới thiệu cho người cần thuê. Dữ liệu lưu tối đa 12 tháng kể từ lần liên hệ cuối, không chia sẻ cho bên khác. Tôi có thể rút lại đồng ý hoặc yêu cầu xóa bất kỳ lúc nào qua Zalo 0348 558 888. <a href="chinh-sach-bao-mat.html" target="_blank" rel="noopener">Chính sách bảo mật</a></span></label>
+      <label class="consent"><input type="checkbox" name="owner" required><span>Tôi là chủ nhà hoặc người được chủ nhà ủy quyền cho thuê; ảnh và video do tôi chụp, không có người hay giấy tờ cá nhân trong ảnh.</span></label>
+      <label class="consent"><input type="checkbox" name="public"><span>Tôi đồng ý cho đăng ảnh tài sản (không kèm số điện thoại) trên Page, nhóm, kênh của Quang Giang. <i>(không bắt buộc)</i></span></label>
+      <div class="msg" role="status" aria-live="polite"></div>
+      <div class="bar" id="bar" hidden><i></i></div>
+      <button class="btn btn-gold" type="submit">Gửi thông tin tài sản</button>
+    </form>
+  </section>
+
+  <ol class="how">
+    <li><b>Gửi thông tin</b><br>Qua form này hoặc nhắn Zalo 0348 558 888.</li>
+    <li><b>Giang gọi lại</b><br>Hỏi rõ nhu cầu hoặc điều kiện cho thuê của anh/chị.</li>
+    <li><b>Hẹn đi xem</b><br>Giới thiệu căn phù hợp. Giang liên hệ chủ nhà để xác nhận nhà còn trống trước khi hẹn đi xem.</li>
+  </ol>
+  <p class="hint" style="margin:-24px 0 40px">Phí môi giới (nếu có) Giang báo rõ và thỏa thuận bằng văn bản trước khi thực hiện. Tiền đặt cọc thuê nhà là giữa người thuê và chủ nhà theo hợp đồng thuê; Giang không nhận tiền cọc hộ.</p>
+</main>
+
+<footer><div class="wrap">
+  <div>
+    <b>Chọn Nhà Cùng Quang Giang</b><br>
+    Nguyễn Quang Giang · Chứng chỉ môi giới BAN-0716 (Sở Xây dựng Bắc Ninh)<br><a href="chinh-sach-bao-mat.html" target="_blank" rel="noopener">Chính sách bảo mật</a>
+    <div class="row"><a class="btn btn-zalo" href="https://zalo.me/0348558888" target="_blank" rel="noopener">Nhắn Zalo</a><a class="btn btn-gold" href="tel:+84348558888">Gọi 0348 558 888</a></div>
+  </div>
+  <div>
+    <a href="https://claude.ai/artifact/LgsbAQ2oJHgtaDzQLD2gFJ" target="_blank" rel="noopener">← Trang chính Chọn Nhà Cùng Quang Giang</a><br>
+    <a href="https://www.youtube.com/@Chonnhacungquanggiang" target="_blank" rel="noopener">YouTube</a> ·
+    <a href="https://www.tiktok.com/@nguyenquanggiang.bds" target="_blank" rel="noopener">TikTok</a> ·
+    <a href="https://www.facebook.com/profile.php?id=61578406556491" target="_blank" rel="noopener">Facebook</a>
+  </div>
+</div></footer>
+
+<script>
+(function(){
+  // Địa chỉ web app Apps Script "Nhận khách cho thuê" (điền sau khi triển khai). Để trống = form chưa nối.
+  var LEAD_URL = "https://script.google.com/macros/s/AKfycby1bEAgX_ZMAQL7TO92c16xgAIkqCv2r_IDFdyyW2wY8dV4kinvvupgLq9cwl96bdGfUw/exec";
+  var MAX_IMG = 10, MAX_VID = 2, VID_MB = 25, IMG_SIDE = 1600;
+
+  var $ = function(s, r){ return (r||document).querySelector(s); };
+  document.addEventListener("click", function(e){ var a = e.target.closest && e.target.closest("a[href]"); if (!a) return;
+    var h = a.getAttribute("href"); if (/^tel:/.test(h)) track("Contact", { method: "call" }); else if (/zalo\.me/.test(h)) track("Contact", { method: "zalo" }); });
+
+  // ---- 2 thẻ chọn; mở thẳng theo #cho-thue / #can-thue
+  var tabs = { can: $("#t-can"), co: $("#t-co") }, panes = { can: $("#p-can"), co: $("#p-co") };
+  function show(k, focus){
+    Object.keys(tabs).forEach(function(x){ tabs[x].setAttribute("aria-selected", x===k ? "true":"false"); panes[x].hidden = x!==k; });
+    if (focus) panes[k].scrollIntoView({block:"start"});
+  }
+  tabs.can.addEventListener("click", function(){ show("can"); trackC("ChonLuong", { luong: "can_thue" }); });
+  tabs.co.addEventListener("click", function(){ show("co"); trackC("ChonLuong", { luong: "cho_thue" }); });
+  if (/cho-thue|co-nha/.test(location.hash)) show("co"); else if (/can-thue/.test(location.hash)) show("can");
+
+  // ---- nguồn khách (utm, trang dẫn sang)
+  var q = new URLSearchParams(location.search);
+  var nguon = { utm_source: q.get("utm_source") || (q.get("fbclid") ? "facebook" : q.get("ttclid") ? "tiktok" : (document.referrer ? new URL(document.referrer).hostname : "")),
+                utm_campaign: q.get("utm_campaign") || "", page: location.href.split("?")[0] };
+
+  function msg(form, kind, html){ var m = $(".msg", form); m.className = "msg show " + kind; m.innerHTML = html; }
+  function phoneOk(p){ return /^0\d{9}$/.test(p); }
+  function val(form, name){ var el = form.elements[name]; return el ? String(el.value || "").trim() : ""; }
+  function types(form){ return Array.prototype.slice.call(form.querySelectorAll('input[name=types]:checked')).map(function(i){ return i.value; }).join(", "); }
+
+  function post(obj){
+    return fetch(LEAD_URL, { method:"POST", headers:{ "Content-Type":"text/plain;charset=utf-8" }, body: JSON.stringify(obj) })
+      .then(function(r){ return r.json(); });
+  }
+
+  function chuaNoi(form){
+    msg(form, "err", "Form chưa gửi được lúc này. Anh/chị nhắn Zalo <a href='https://zalo.me/0348558888' target='_blank' rel='noopener'>0348 558 888</a> hoặc gọi trực tiếp, Giang trả lời sớm nhất có thể.");
+  }
+
+  function base(form, kind){
+    var phone = val(form, "phone").replace(/[^\d]/g, "");
+    if (val(form, "name").length < 2) { msg(form, "err", "Anh/chị điền họ tên giúp Giang."); form.elements.name.focus(); return null; }
+    if (!phoneOk(phone)) { msg(form, "err", "Số điện thoại gồm 10 số, bắt đầu bằng 0."); form.elements.phone.focus(); return null; }
+    if (!form.elements.consent.checked) { msg(form, "err", "Anh/chị tích ô đồng ý lưu thông tin để Giang liên hệ."); return null; }
+    if (form.elements.owner && !form.elements.owner.checked) { msg(form, "err", "Anh/chị tích ô xác nhận là chủ nhà hoặc người được ủy quyền."); return null; }
+    return { kind: kind, name: val(form, "name"), phone: phone, types: types(form), area: val(form, "area"),
+             size: val(form, "size"), note: val(form, "note"), consent: "co", owner: form.elements.owner ? "co" : "", public: (form.elements.public && form.elements.public.checked) ? "co" : "khong", utm_source: nguon.utm_source, utm_campaign: nguon.utm_campaign, page: nguon.page };
+  }
+
+  function xong(form, id, extra){
+    form.reset();
+    msg(form, "ok", "<b>Giang đã nhận thông tin" + (id ? " (mã " + id + ")" : "") + ".</b> Giang sẽ gọi lại sớm. Cần gấp, anh/chị nhắn Zalo <a href='https://zalo.me/0348558888' target='_blank' rel='noopener'>0348 558 888</a>." + (extra || ""));
+  }
+
+  // ---- form khách cần thuê
+  var fCan = $("#f-can");
+  fCan.addEventListener("submit", function(e){
+    e.preventDefault();
+    var d = base(fCan, "can_thue"); if (!d) return;
+    if (!LEAD_URL) return chuaNoi(fCan);
+    var b = $("button[type=submit]", fCan); b.disabled = true; msg(fCan, "wait", "Đang gửi…");
+    post(d).then(function(r){
+      if (r && r.ok) { if (!r.trung) track("Lead", { content_name: "Cho thue - can thue", content_category: d.types || "chua chon" }); xong(fCan, r.id); } else msg(fCan, "err", "Chưa gửi được. Anh/chị thử lại hoặc nhắn Zalo 0348 558 888.");
+    }).catch(function(){ msg(fCan, "err", "Mạng chập chờn, chưa gửi được. Anh/chị thử lại hoặc nhắn Zalo 0348 558 888."); })
+      .finally(function(){ b.disabled = false; });
+  });
+
+  // ---- chọn ảnh, video
+  var picked = [], drop = $("#drop"), inp = $("#files"), thumbs = $("#thumbs"), fCo = $("#f-co");
+  drop.addEventListener("click", function(){ inp.click(); });
+  drop.addEventListener("keydown", function(e){ if (e.key === "Enter" || e.key === " ") { e.preventDefault(); inp.click(); } });
+  ["dragover","dragenter"].forEach(function(t){ drop.addEventListener(t, function(e){ e.preventDefault(); drop.classList.add("on"); }); });
+  ["dragleave","drop"].forEach(function(t){ drop.addEventListener(t, function(){ drop.classList.remove("on"); }); });
+  drop.addEventListener("drop", function(e){ e.preventDefault(); add(e.dataTransfer.files); });
+  inp.addEventListener("change", function(){ add(inp.files); inp.value = ""; });
+
+  function add(list){
+    var bao = [];
+    Array.prototype.forEach.call(list, function(f){
+      var isImg = /^image\//.test(f.type), isVid = /^video\//.test(f.type);
+      var nImg = picked.filter(function(p){ return p.img; }).length, nVid = picked.length - nImg;
+      if (isImg && nImg >= MAX_IMG) return bao.push("Đủ " + MAX_IMG + " ảnh rồi.");
+      if (isVid && nVid >= MAX_VID) return bao.push("Đủ " + MAX_VID + " video rồi.");
+      if (isVid && f.size > VID_MB * 1048576) return bao.push("Video \"" + f.name + "\" nặng hơn " + VID_MB + " MB, anh/chị gửi qua Zalo giúp Giang.");
+      if (!isImg && !isVid) return bao.push("\"" + f.name + "\" không phải ảnh hay video.");
+      if (isVid && !/^video\/(mp4|quicktime)$/.test(f.type)) return bao.push("Video \"" + f.name + "\" cần định dạng MP4 hoặc MOV, hoặc gửi qua Zalo.");
+      picked.push({ file: f, img: isImg, url: URL.createObjectURL(f) });
+    });
+    draw();
+    if (bao.length) msg(fCo, "err", bao.join("<br>"));
+  }
+  function draw(){
+    thumbs.innerHTML = "";
+    picked.forEach(function(p, i){
+      var d = document.createElement("div"); d.className = "th";
+      var m = document.createElement(p.img ? "img" : "video"); m.src = p.url; if (!p.img) { m.muted = true; m.preload = "metadata"; } else m.alt = "Ảnh tài sản " + (i + 1);
+      d.appendChild(m);
+      if (!p.img) { var s = document.createElement("span"); s.className = "vid"; s.textContent = "Video"; d.appendChild(s); }
+      var x = document.createElement("button"); x.type = "button"; x.setAttribute("aria-label", "Bỏ tệp này"); x.textContent = "×";
+      x.addEventListener("click", function(){ URL.revokeObjectURL(p.url); picked.splice(i, 1); draw(); });
+      d.appendChild(x); thumbs.appendChild(d);
+    });
+  }
+
+  // thu nhỏ ảnh về cạnh dài 1600px, JPEG
+  function nenAnh(file){
+    return new Promise(function(res){
+      var img = new Image(), u = URL.createObjectURL(file);
+      img.onload = function(){
+        var s = Math.min(1, IMG_SIDE / Math.max(img.naturalWidth, img.naturalHeight));
+        var c = document.createElement("canvas"); c.width = Math.round(img.naturalWidth * s); c.height = Math.round(img.naturalHeight * s);
+        c.getContext("2d").drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(u);
+        c.toBlob(function(b){ res(b || file); }, "image/jpeg", 0.82);
+      };
+      img.onerror = function(){ URL.revokeObjectURL(u); res(file); };
+      img.src = u;
+    });
+  }
+  function b64(blob){
+    return new Promise(function(res, rej){ var r = new FileReader(); r.onload = function(){ res(String(r.result).split(",")[1]); }; r.onerror = rej; r.readAsDataURL(blob); });
+  }
+
+  // ---- form chủ có tài sản
+  fCo.addEventListener("submit", function(e){
+    e.preventDefault();
+    var d = base(fCo, "cho_thue"); if (!d) return;
+    if (!LEAD_URL) return chuaNoi(fCo);
+    d.files = picked.length;
+    var b = $("button[type=submit]", fCo), bar = $("#bar"), fill = $("#bar i");
+    b.disabled = true; msg(fCo, "wait", "Đang gửi thông tin…");
+    var id = null, loi = 0;
+    post(d).then(function(r){
+      if (!r || !r.ok) throw new Error("ghi");
+      id = r.id;
+      if (!r.trung) track("Lead", { content_name: "Cho thue - co nha cho thue", content_category: d.types || "chua chon" });
+      if (!picked.length) return;
+      bar.hidden = false;
+      var i = 0;
+      function next(){
+        if (i >= picked.length) return Promise.resolve();
+        var p = picked[i]; i++;
+        msg(fCo, "wait", "Đang tải " + (p.img ? "ảnh" : "video") + " " + i + "/" + picked.length + "… Đừng đóng trang.");
+        fill.style.width = Math.round((i - 1) / picked.length * 100) + "%";
+        return (p.img ? nenAnh(p.file) : Promise.resolve(p.file)).then(b64).then(function(data){
+          return post({ action: "file", id: id, phone: d.phone, name: (p.img ? "anh-" : "video-") + i + (p.img ? ".jpg" : "." + (p.file.name.split(".").pop() || "mp4")),
+                        mime: p.img ? "image/jpeg" : (p.file.type || "video/mp4"), data: data });
+        }).then(function(r){ if (!r || !r.ok) loi++; }).catch(function(){ loi++; }).then(next);
+      }
+      return next();
+    }).then(function(){
+      fill.style.width = "100%";
+      picked.forEach(function(p){ URL.revokeObjectURL(p.url); }); picked = []; draw();
+      xong(fCo, id, loi ? "<br>Có " + loi + " tệp chưa tải lên được, anh/chị gửi lại qua Zalo giúp Giang." : "");
+    }).catch(function(){
+      msg(fCo, "err", id ? "Đã nhận thông tin (mã " + id + ") nhưng tải ảnh, video bị lỗi. Anh/chị gửi ảnh qua Zalo 0348 558 888 giúp Giang." : "Chưa gửi được. Anh/chị thử lại hoặc nhắn Zalo 0348 558 888.");
+    }).finally(function(){ b.disabled = false; setTimeout(function(){ bar.hidden = true; fill.style.width = "0"; }, 1500); });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1102 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta property="og:title" content="Cát Tường Smart City - Nhà ở xã hội Bắc Ninh">
+<meta property="og:image" content="https://nppbachuong.github.io/cattuong/img/og.jpg">
+<meta property="og:url" content="https://nppbachuong.github.io/cattuong/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:description" content="Nhà ở xã hội Cát Tường Smart City, xã Yên Trung, Bắc Ninh. Đợt 215 căn nhận hồ sơ 15/11-15/12/2026, giá căn thường 15,99 triệu/m² (chưa VAT, bảo trì), căn 2-3 ngủ 51-70 m². Tư vấn hồ sơ cùng D-Holdings.">
+<title>Cát Tường Smart City</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Nhà ở xã hội Cát Tường Smart City, xã Yên Trung, Bắc Ninh. Đợt 215 căn nhận hồ sơ 15/11-15/12/2026, giá căn thường 15,99 triệu/m² (chưa VAT, bảo trì), căn 2-3 ngủ 51-70 m². Tư vấn hồ sơ cùng D-Holdings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap">
+<style>
+/* Layout: hồ sơ dự án xếp thành các dải đỏ thương hiệu xen dải nền sáng; nét cao ốc vàng đồng của logo D-Holdings làm họa tiết. */
+:root{
+  --red:#8C0300; --red-deep:#5C0200; --carmine:#9D2532;
+  --gold:#E8C194; --deer:#B3804B; --gold-grad:linear-gradient(100deg,#B3804B 0%,#E8C194 100%);
+  --paper:#F2F3F5; --platinum:#E6E7E8; --white:#FFFFFF;
+  --ink:#24130F; --muted:#6E5D57; --line:#DCD3CF;
+  --ok:#1F7A4D; --warn:#A86A00; --bad:#B42318;
+  --display:"Lexend",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --body:"Lexend",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --r:10px; --wrap:1180px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+.u{font-family:var(--body);text-transform:none;font-weight:600}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;font-weight:300;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input,select{font:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.15;text-wrap:balance;margin:0;letter-spacing:0}
+h2{font-size:clamp(28px,4.2vw,44px);text-transform:uppercase}
+h3{font-size:20px}
+p{margin:0}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--deer)}
+.lead{font-size:18px;color:var(--muted);max-width:62ch}
+.tnum{font-variant-numeric:tabular-nums}
+.sec{padding-block:clamp(56px,8vw,96px)}
+.sec-head{display:grid;gap:12px;margin-bottom:36px}
+.band-red{background:var(--red);color:var(--white);position:relative;overflow:hidden}
+.band-red .eyebrow{color:var(--gold)}
+.band-red .lead{color:#F3DCD6}
+.band-white{background:var(--white)}
+.towers{position:absolute;inset:auto 0 0 auto;width:min(560px,70%);height:auto;opacity:.22;pointer-events:none}
+.grad-text{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--red);color:var(--white);box-shadow:0 1px 0 rgba(0,0,0,.15)}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:64px}
+.top .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.top .brand img{height:44px;width:auto}
+.top nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.top nav a{text-decoration:none;font-size:14px;font-weight:400;padding:8px 10px;border-radius:6px;color:#F6E4DF}
+.top nav a:hover{background:rgba(255,255,255,.1);color:var(--white)}
+.call{display:inline-flex;align-items:center;gap:8px;background:var(--gold-grad);color:var(--red-deep);font-weight:600;text-decoration:none;padding:9px 14px;border-radius:999px;font-size:15px;white-space:nowrap}
+@media (max-width:980px){.top nav{display:none}.top .call{margin-left:auto}}
+
+/* hero */
+.hero{position:relative;color:var(--white);background:var(--red-deep)}
+.hero-bg{position:absolute;inset:0;background:url("img/facade.jpg") center/cover no-repeat}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(60,2,0,.92) 0%,rgba(60,2,0,.72) 45%,rgba(60,2,0,.25) 100%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:56px}
+.hero-copy{display:grid;gap:20px;min-width:0}
+.hero-logo{width:min(340px,80%);height:auto}
+.hero h1{font-size:clamp(34px,5.6vw,64px);text-transform:uppercase}
+.hero .tag{font-size:19px;color:#F7E6DD;max-width:46ch}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(232,193,148,.35);border:1px solid rgba(232,193,148,.35);border-radius:var(--r);overflow:hidden;max-width:620px}
+.facts div{background:rgba(60,2,0,.55);padding:14px 14px 12px;display:grid;gap:2px}
+.facts b{font-family:var(--display);font-size:22px;color:var(--gold);font-weight:800;line-height:1.1}
+.facts span{font-size:12.5px;color:#EBD3CB;line-height:1.35}
+@media (max-width:980px){.hero .wrap{grid-template-columns:1fr}.facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* form card */
+.card-form{background:var(--white);color:var(--ink);border-radius:14px;padding:24px;box-shadow:0 18px 50px rgba(30,0,0,.35);display:grid;gap:14px;min-width:0}
+.card-form h3{font-size:21px;color:var(--red);text-transform:uppercase}
+.card-form .sub{font-size:14px;color:var(--muted)}
+.field{display:grid;gap:5px}
+.field label{font-size:13px;font-weight:500}
+.field input,.field select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:var(--white);color:var(--ink);font-size:16px}
+.field input:focus,.field select:focus{border-color:var(--deer);outline:none;box-shadow:0 0 0 3px rgba(179,128,75,.25)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:420px){.row2{grid-template-columns:1fr}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;border-radius:8px;padding:13px 18px;font-weight:600;font-size:16px;text-decoration:none}
+.btn-red{background:var(--red);color:var(--white)}
+.btn-red:hover{background:var(--carmine)}
+.btn-gold{background:var(--gold-grad);color:var(--red-deep)}
+.btn-ghost{background:transparent;border:1px solid currentColor;color:inherit}
+.form-msg{font-size:14px;border-radius:8px;padding:10px 12px;display:none}
+.form-msg.show{display:block}
+.form-msg.ok{background:#E8F4EE;color:var(--ok)}
+.form-msg.err{background:#FDECEA;color:var(--bad)}
+.form-msg.info{background:#FBF3E8;color:#7A4A12}
+.fine{font-size:12px;color:var(--muted)}
+.sale-chip{display:none;align-items:center;gap:12px;background:#FBF3E8;border:1px solid #EBD6B9;border-radius:10px;padding:8px 12px 8px 8px;font-size:13.5px;line-height:1.35}
+.sale-chip.show{display:flex}
+.sale-chip img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);flex:none}
+.sale-chip div{display:grid;min-width:0}
+.sale-chip small{font-size:11.5px;color:var(--deer);letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+.sale-chip b{font-weight:600}
+.sale-chip .sc-tel{font-weight:600;color:var(--red);white-space:nowrap;font-variant-numeric:tabular-nums}
+.sale-chip a{margin-left:auto;font-size:12.5px;color:var(--red);font-weight:500;white-space:nowrap}
+
+/* hồ sơ chuyên viên */
+.agent{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:48px;align-items:start}
+.agent-photo{margin:0;position:relative;border-radius:18px;overflow:hidden;background:linear-gradient(160deg,#F7EBDD,#E9D3B4);box-shadow:0 24px 60px rgba(60,10,0,.18)}
+.agent-photo::before{content:"";position:absolute;inset:12px;border:1.5px solid rgba(179,128,75,.55);border-radius:12px;pointer-events:none;z-index:1}
+.agent-photo img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top}
+.agent-photo figcaption{position:absolute;left:12px;right:12px;bottom:12px;z-index:2;background:linear-gradient(100deg,rgba(92,2,0,.94),rgba(140,3,0,.9));color:var(--white);border-radius:0 0 12px 12px;padding:14px 18px;display:grid;gap:2px}
+.agent-photo figcaption b{font-family:var(--display);font-weight:800;font-size:20px;text-transform:uppercase;letter-spacing:.02em}
+.agent-photo figcaption span{font-size:13.5px;color:var(--gold)}
+.agent-body{display:grid;gap:18px;min-width:0}
+.agent-body h2{color:var(--red)}
+.agent-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.agent-stats div{background:var(--white);border:1px solid var(--platinum);border-radius:12px;padding:14px;display:grid;gap:2px}
+.agent-stats b{font-family:var(--display);font-weight:800;font-size:30px;color:var(--red);line-height:1}
+.agent-stats b sup{font-family:var(--body);font-size:13px;color:var(--deer);margin-left:2px}
+.agent-stats span{font-size:13px;color:var(--muted);line-height:1.35}
+.agent-cta{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.agent-mail{font-size:14px;color:var(--muted)}
+.agent-mail b{color:var(--ink);font-weight:500}
+.deals{background:var(--white);border-radius:14px;border:1px solid var(--platinum);padding:18px 20px;display:grid;gap:10px}
+.deals h3{font-family:var(--body);font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ink)}
+.deals ol{list-style:none;margin:0;padding:0;display:grid}
+.deals li{display:grid;grid-template-columns:62px minmax(0,1fr) auto;gap:12px;align-items:center;padding:11px 0;border-top:1px dashed var(--line)}
+.deals li:first-child{border-top:0}
+.deals time{font-size:13px;font-weight:600;color:var(--deer)}
+.deals .d-main{display:grid;min-width:0}
+.deals .d-main b{font-weight:600;font-size:14.5px}
+.deals .d-main span{font-size:13px;color:var(--muted)}
+.deals .st{font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:#E3F2EA;color:var(--ok);white-space:nowrap}
+.deals .st.pending{background:#FBF0DD;color:var(--warn)}
+.help-list{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.help-list li{display:grid;grid-template-columns:22px 1fr;column-gap:10px;padding:10px 0;border-top:1px dashed var(--line)}
+.help-list li:first-child{border-top:0}
+.help-list li::before{content:"";grid-row:span 2;width:10px;height:10px;margin-top:7px;background:var(--gold-grad);transform:rotate(45deg)}
+.help-list b{font-weight:600;font-size:14.5px}
+.help-list span{font-size:13px;color:var(--muted)}
+.sample-note{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:#7A4A12;background:#FBF3E8;border:1px dashed #E2C08F;border-radius:8px;padding:8px 10px}
+.agent-motto{margin:0;padding:4px 0 4px 16px;border-left:3px solid var(--gold);font-size:16px;color:var(--ink)}
+.agent-motto span{display:block;font-size:13px;color:var(--muted);margin-top:4px}
+@media (max-width:900px){.agent{grid-template-columns:1fr;gap:28px}.agent-photo{max-width:420px}.agent-stats b{font-size:24px}}
+@media (max-width:420px){.deals li{grid-template-columns:54px minmax(0,1fr)}.deals .st{grid-column:2;justify-self:start}}
+.dock a{white-space:nowrap}
+.dock .d-call img{width:24px;height:24px;border-radius:50%;object-fit:cover;border:1.5px solid var(--gold)}
+
+/* policy */
+.policy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;position:relative}
+.policy-box{border:1.5px solid var(--gold);border-radius:14px;padding:26px;display:grid;gap:16px;background:rgba(0,0,0,.12)}
+.policy-box ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.policy-box li{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start}
+.policy-box li::before{content:"";width:10px;height:10px;margin-top:8px;background:var(--gold);transform:rotate(45deg)}
+.policy-box strong{color:var(--gold);font-weight:600}
+.plans{display:grid;gap:12px}
+.plan{background:var(--white);color:var(--ink);border-radius:12px;padding:18px 20px;display:grid;gap:6px}
+.plan h3{font-size:17px;color:var(--red);text-transform:uppercase}
+.plan p{font-size:14.5px;color:var(--muted)}
+.plan .gift{font-size:13px;font-weight:500;color:var(--deer)}
+@media (max-width:900px){.policy{grid-template-columns:1fr}}
+
+/* overview */
+.ov{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px;align-items:start}
+.spec{width:100%;border-collapse:collapse;font-size:15px;background:var(--white);border-radius:12px;overflow:hidden}
+.spec th,.spec td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--platinum);vertical-align:top}
+.spec th{width:38%;font-weight:500;color:var(--muted)}
+.spec tr:last-child th,.spec tr:last-child td{border-bottom:0}
+.ov figure{margin:0;display:grid;gap:8px}
+.ov figure img{border-radius:12px;aspect-ratio:16/10;object-fit:cover;width:100%;cursor:zoom-in}
+figcaption{font-size:13px;color:var(--muted)}
+.towers4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}
+.towers4 div{background:var(--white);border-radius:10px;padding:12px;border-top:3px solid var(--deer);display:grid;gap:2px}
+.towers4 b{font-family:var(--display);font-weight:800;font-size:16px;color:var(--red)}
+.towers4 span{font-size:13px;color:var(--muted)}
+@media (max-width:900px){.ov{grid-template-columns:1fr}.towers4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* location */
+.loc{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:36px;align-items:start}
+.loc img{border-radius:12px;cursor:zoom-in;background:var(--white)}
+.times{display:grid;gap:20px}
+.times h3{font-size:15px;color:var(--red);text-transform:uppercase;letter-spacing:.04em}
+.tlist{list-style:none;margin:8px 0 0;padding:0;display:grid}
+.tlist li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.tlist li span:last-child{font-weight:500;color:var(--red);white-space:nowrap}
+.workers{background:var(--red);color:var(--white);border-radius:12px;padding:18px 20px;display:grid;gap:4px}
+.workers b{font-family:var(--display);font-weight:800;font-size:34px;color:var(--gold);line-height:1}
+.workers span{font-size:14px;color:#F3DCD6}
+@media (max-width:900px){.loc{grid-template-columns:1fr}}
+
+/* tổng quan: ảnh toàn khu chìm dưới lớp nền sáng */
+#tong-quan{background:linear-gradient(180deg,rgba(242,243,245,.9) 0%,rgba(242,243,245,.82) 50%,rgba(242,243,245,.94) 100%),url("img/tong-the.jpg") center/cover no-repeat}
+@media (min-width:981px){#tong-quan{background-attachment:scroll,fixed}}
+#tong-quan .spec{background:rgba(255,255,255,.9);box-shadow:0 10px 30px rgba(60,10,0,.08)}
+#tong-quan .towers4 div{background:rgba(255,255,255,.9)}
+
+/* tiện ích: nền phối cảnh tổng thể chìm dưới lớp đỏ */
+#hinh-anh{background:linear-gradient(180deg,rgba(140,3,0,.86) 0%,rgba(110,2,0,.9) 55%,rgba(80,1,0,.95) 100%),url("img/tong-the-tren-cao.jpg") center/cover no-repeat}
+@media (min-width:981px){#hinh-anh{background-attachment:scroll,fixed}}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.gal figure{margin:0;position:relative;border-radius:10px;overflow:hidden;cursor:zoom-in;background:var(--red-deep)}
+.gal figure.wide{grid-column:span 2;grid-row:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;transition:transform .5s}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 12px 10px;color:var(--white);font-size:13.5px;background:linear-gradient(transparent,rgba(30,0,0,.8))}
+@media (max-width:900px){.gal{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.amen{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:28px}
+.amen div{display:grid;gap:4px;align-content:start}
+.amen b{font-family:var(--display);font-weight:800;color:var(--gold);font-size:15px;text-transform:uppercase}
+.amen span{font-size:14px;color:#F3DCD6}
+@media (max-width:900px){.amen{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* tabs */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.tab{border:1px solid var(--line);background:var(--white);color:var(--ink);padding:9px 14px;border-radius:999px;cursor:pointer;font-size:14.5px;font-weight:400}
+.tab[aria-selected="true"]{background:var(--red);border-color:var(--red);color:var(--white);font-weight:500}
+.panel img{border-radius:12px;background:var(--white);cursor:zoom-in;width:100%}
+.unit{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:28px;align-items:center}
+.unit-info{display:grid;gap:14px}
+.unit-info h3{font-size:30px;color:var(--red);text-transform:uppercase}
+.area{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.area div{background:var(--paper);border-radius:10px;padding:12px 14px}
+.area b{display:block;font-family:var(--display);font-weight:800;font-size:24px;color:var(--ink)}
+.area span{font-size:12.5px;color:var(--muted)}
+.unit-price{font-size:15px}
+.unit-price b{font-weight:600;color:var(--red)}
+@media (max-width:900px){.unit{grid-template-columns:1fr}}
+
+/* handover */
+.ho{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ho div{background:var(--white);border-radius:12px;padding:18px;display:grid;gap:8px;align-content:start}
+.ho h3{font-size:15px;text-transform:uppercase;color:var(--red);letter-spacing:.03em}
+.ho ul{margin:0;padding-left:18px;font-size:14.5px;display:grid;gap:4px}
+.ho ul span{color:var(--muted)}
+@media (max-width:900px){.ho{grid-template-columns:1fr}}
+.eq{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.eq-i{background:var(--white);border-radius:12px;padding:18px 16px;display:grid;gap:4px;align-content:start;border:1px solid var(--platinum);transition:border-color .2s,transform .2s}
+.eq-i:hover{border-color:var(--gold);transform:translateY(-2px)}
+.eq-i svg{width:56px;height:56px;padding:9px;border-radius:14px;background:linear-gradient(135deg,#FBF1E4,#F3E0C6);fill:none;stroke:var(--red);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-bottom:8px}
+.eq-room{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--deer);font-weight:500}
+.eq-i h3{font-family:var(--body);font-size:16.5px;font-weight:600;color:var(--ink);text-transform:none;letter-spacing:0}
+.eq-brand{font-size:13.5px;color:var(--muted);line-height:1.45}
+.sys{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.sys figure{margin:0;display:grid;gap:8px}
+.sys img{border-radius:12px;cursor:zoom-in;width:100%;aspect-ratio:16/9;object-fit:cover}
+@media (max-width:900px){.eq{grid-template-columns:repeat(2,minmax(0,1fr))}.sys{grid-template-columns:1fr}}
+
+/* calculator */
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:24px;align-items:start}
+.calc-in{background:var(--white);color:var(--ink);border-radius:14px;padding:22px;display:grid;gap:14px}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.seg button{border:1px solid var(--line);background:var(--white);border-radius:8px;padding:10px 6px;cursor:pointer;font-size:13.5px;line-height:1.3}
+.seg button[aria-pressed="true"]{background:var(--red);color:var(--white);border-color:var(--red);font-weight:500}
+.range-row{display:flex;align-items:center;gap:12px}
+.range-row input[type=range]{flex:1;accent-color:var(--red)}
+.range-row output{min-width:104px;text-align:right;font-weight:600;color:var(--red)}
+.calc-out{background:var(--white);color:var(--ink);border-radius:14px;padding:22px;display:grid;gap:16px;min-width:0}
+.total{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.total div{background:var(--paper);border-radius:10px;padding:12px}
+.total span{display:block;font-size:12.5px;color:var(--muted)}
+.total b{font-size:19px;font-weight:600}
+.total .hl{background:var(--red);color:var(--white)}
+.total .hl span{color:#F3DCD6}
+.sched-wrap{overflow-x:auto}
+.sched{width:100%;border-collapse:collapse;font-size:14.5px;min-width:420px}
+.sched th,.sched td{padding:9px 10px;border-bottom:1px solid var(--platinum);text-align:left}
+.sched th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:500}
+.sched td:nth-child(2),.sched td:nth-child(3),.sched th:nth-child(2),.sched th:nth-child(3){text-align:right}
+.sched tr.bank td{color:var(--deer)}
+.loan{display:grid;gap:10px;border-top:1px solid var(--platinum);padding-top:14px}
+.loan .row2 .field input{padding:9px 10px}
+.monthly{display:flex;justify-content:space-between;align-items:baseline;gap:12px;background:#FBF3E8;border-radius:10px;padding:12px 14px}
+.monthly b{font-size:22px;color:var(--red)}
+@media (max-width:900px){.calc{grid-template-columns:1fr}.total{grid-template-columns:1fr 1fr}}
+
+/* eligibility */
+.elig{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:start}
+.quiz{background:var(--white);border-radius:14px;padding:22px;display:grid;gap:18px;border:1px solid var(--line)}
+.q{display:grid;gap:8px}
+.q-title{font-weight:500;font-size:15.5px}
+.q-title i{font-style:normal;display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--red);color:var(--white);font-size:13px;margin-right:8px}
+.opts{display:grid;gap:6px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:8px;cursor:pointer;font-size:14.5px}
+.opt input{margin-top:5px;accent-color:var(--red)}
+.opt:has(input:checked){border-color:var(--red);background:#FBF0EE}
+.verdict{border-radius:14px;padding:22px;display:grid;gap:12px;background:var(--white);border:1px solid var(--line);position:sticky;top:84px}
+.verdict .badge{justify-self:start;font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px;background:var(--platinum);color:var(--muted)}
+.verdict.ok .badge{background:#E3F2EA;color:var(--ok)}
+.verdict.warn .badge{background:#FBF0DD;color:var(--warn)}
+.verdict.bad .badge{background:#FDECEA;color:var(--bad)}
+.verdict h3{font-size:22px}
+.verdict ul{margin:0;padding-left:18px;font-size:14.5px;display:grid;gap:4px}
+@media (max-width:900px){.elig{grid-template-columns:1fr}.verdict{position:static}}
+
+/* timeline */
+.road{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;counter-reset:s}
+.road li{position:relative;padding:28px 16px 0 0;display:grid;gap:4px;align-content:start}
+.road li::before{content:"";position:absolute;top:8px;left:0;right:0;height:2px;background:rgba(232,193,148,.45)}
+.road li::after{content:"";position:absolute;top:2px;left:0;width:14px;height:14px;background:var(--red);border:2px solid var(--gold);transform:rotate(45deg)}
+.road li.now::after{background:var(--gold)}
+.road b{font-family:var(--display);font-weight:800;font-size:22px;color:var(--gold)}
+.road span{font-size:14px;color:#F3DCD6}
+.road .now-tag{justify-self:start;font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:var(--gold);color:var(--red-deep);padding:2px 8px;border-radius:999px}
+@media (max-width:900px){.road{grid-template-columns:1fr;gap:18px}.road li{padding:0 0 0 30px}.road li::before{top:0;bottom:-18px;left:7px;right:auto;width:2px;height:auto}.road li:last-child::before{display:none}.road li::after{top:4px}}
+
+/* legal */
+.legal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px;list-style:none;margin:0;padding:0}
+.legal li{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
+.legal li b{font-weight:600;color:var(--red)}
+.legal li span{color:var(--muted);font-size:13.5px;display:block}
+@media (max-width:900px){.legal{grid-template-columns:1fr}.legal li{grid-template-columns:96px 1fr}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center;position:relative}
+.contact-lines{display:grid;gap:14px}
+.phone-big{font-family:var(--display);font-weight:800;font-size:clamp(30px,5vw,46px);color:var(--gold);text-decoration:none;letter-spacing:.02em}
+.copy-btn{font-size:13px;padding:6px 12px}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+
+footer{background:#2A0100;color:#D9C4BD;font-size:13.5px}
+footer .wrap{padding-block:36px 110px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start}
+footer img{height:72px;width:auto}
+footer b{color:var(--white);font-weight:500}
+footer p+p{margin-top:6px}
+.disclaimer{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;font-size:12.5px;color:#B79F98}
+@media (max-width:700px){footer .wrap{grid-template-columns:1fr}}
+
+/* sticky mobile bar */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:45;display:none;grid-template-columns:1fr 1fr 1.2fr;gap:8px;background:var(--white);border-top:1px solid var(--line);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));box-shadow:0 -6px 20px rgba(0,0,0,.08)}
+.dock a{display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;border-radius:8px;padding:11px 6px;font-weight:600;font-size:14.5px}
+.dock .d-call{background:var(--red);color:var(--white)}
+.dock .d-zalo{background:#0068FF;color:var(--white)}
+.dock .d-reg{background:var(--gold-grad);color:var(--red-deep)}
+@media (max-width:980px){.dock{display:grid}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:60;background:rgba(20,0,0,.92);display:none;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb.show{display:flex}
+.lb img{max-height:88vh;max-width:100%;width:auto;border-radius:8px}
+.lb button{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px));background:var(--white);color:var(--ink);border:0;border-radius:999px;width:44px;height:44px;font-size:22px;cursor:pointer}
+
+/* Cat Tuong: them */
+.dl{display:inline-flex;align-items:center;gap:10px;justify-self:start;padding:8px 14px;border:1px solid var(--gold);border-radius:999px;color:var(--gold);font-size:14.5px;font-weight:500;background:rgba(60,2,0,.45)}
+.dl .dot{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.gal4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.gal4+.gal4{margin-top:12px}
+.gal4 figure{margin:0;position:relative;border-radius:10px;overflow:hidden;cursor:zoom-in;background:var(--platinum)}
+.gal4 img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;transition:transform .5s}
+.gal4.land img{aspect-ratio:5/4}
+.gal4 figure:hover img{transform:scale(1.04)}
+.gal4 figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 12px 10px;color:var(--white);font-size:13.5px;background:linear-gradient(transparent,rgba(30,0,0,.8))}
+@media (max-width:900px){.gal4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.seg.seg2{grid-template-columns:repeat(2,1fr)}
+.steps4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:32px}
+.steps4 div{background:rgba(0,0,0,.14);border:1px solid rgba(232,193,148,.4);border-radius:12px;padding:16px;display:grid;gap:6px;align-content:start}
+.steps4 b{color:var(--gold);font-weight:600}
+.steps4 span{font-size:14px;color:#F3DCD6}
+@media (max-width:900px){.steps4{grid-template-columns:1fr}}
+#nguon .legal{grid-template-columns:1fr}
+#nguon .legal a{color:var(--red);font-weight:500}
+.noform{display:grid;gap:10px}
+.noform p{font-size:14.5px;color:var(--muted)}
+</style>
+<script>
+var LIVE = location.protocol !== "file:" && !/^(localhost|127(\.\d+){3}|192\.168(\.\d+){2}|\[::1\]|)$/.test(location.hostname);
+if (LIVE) { !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq.disablePushState = true; /* bấm menu # không tính thêm PageView */ fbq("init", "716490403350364"); fbq("track", "PageView"); }
+/* Google Analytics 4: tài sản "Landing BĐS Quang Giang" (tài khoản Bachuong.com, nppbachuong), dùng chung với Nam Ngạn, Parc Ville */
+var GA_ID = "G-97SR4JPN3R";
+window.dataLayer = window.dataLayer || [];
+if (LIVE) { (function () { var s = document.createElement("script"); s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID; document.head.appendChild(s); })();
+  window.gtag = function () { dataLayer.push(arguments); }; gtag("js", new Date()); gtag("config", GA_ID); }
+var GA_EV = { Lead: "generate_lead", Contact: "contact" };
+function ga(ev, data) { if (window.gtag) gtag("event", GA_EV[ev] || ev, data || {}); }
+window.__sk = [];  /* nhat ky su kien de soat khi xem thu tren may */
+function track(ev, data) { window.__sk.push(ev); if (window.fbq) fbq("track", ev, data || {}); ga(ev, data); }
+function trackC(ev, data) { window.__sk.push(ev + " " + JSON.stringify(data || {})); if (window.fbq) fbq("trackCustom", ev, data || {}); ga(ev, data); }
+/* chi ban su kien khi khach dung tay 1,5 giay va ket qua khac lan truoc (go thu nhap tung so khong bi dem trung) */
+var __hen = {}, __cuoi = {};
+function trackSau(ev, data) { clearTimeout(__hen[ev]); __hen[ev] = setTimeout(function () { var k = JSON.stringify(data); if (__cuoi[ev] === k) return; __cuoi[ev] = k; trackC(ev, data); }, 1500); }
+document.addEventListener("click", function (e) { var a = e.target.closest && e.target.closest("a"); if (!a) return;
+  if (/^tel:/.test(a.getAttribute("href") || "")) track("Contact", { method: "call" });
+  else if (/zalo\.me/.test(a.href)) track("Contact", { method: "zalo" }); }, true);
+</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="tw">
+      <path d="M40 400V170l60-46v276M150 400V110l70-50 0 340M260 400V20l90 62v318M400 400V110l70 50v240M520 400V170l60 46v184" fill="none" stroke="#E8C194" stroke-width="2"/>
+      <path d="M40 400 310 560 580 400" fill="none" stroke="#E8C194" stroke-width="2"/>
+    </g>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="D-Holdings"><img src="img/dh-logo-dark.png" alt="D-Holdings - Kiến tạo giá trị bền vững" width="96" height="88"></a>
+    <nav aria-label="Mục lục">
+      <a href="#chinh-sach">Giá & đợt</a>
+      <a href="#tong-quan">Tổng quan</a>
+      <a href="#hinh-anh">Hình ảnh</a>
+      <a href="#can-ho">Căn hộ</a>
+      <a href="#dong-tien">Tính tiền</a>
+      <a href="#dieu-kien">Điều kiện mua</a>
+      <a href="#lo-trinh">Hồ sơ</a>
+      <a href="#chuyen-vien" class="js-nav-agent" hidden>Chuyên viên</a>
+    </nav>
+    <a class="call js-tel" href="tel:0348558888"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span class="js-phone">0348 558 888</span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="Ảnh flycam các tòa nhà ở xã hội Cát Tường Smart City bên hồ"></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow" style="color:var(--gold)">Nhà ở xã hội · Xã Yên Trung, Bắc Ninh</p>
+      <h1>Cát Tường<br><span class="grad-text">Smart City</span></h1>
+      <p class="tag">Nhà ở xã hội trong vùng khu công nghiệp Yên Phong, có tòa đã có cư dân (tòa M2, chuyên viên Quang Giang đến xem tháng 5/2026). Đợt mới có 215 căn để bán, cho thuê và thuê mua.</p>
+      <div class="facts tnum">
+        <div><b>15,99</b><span>triệu/m² căn thường, chưa VAT và bảo trì</span></div>
+        <div><b>215</b><span>căn đợt này tại 7 tòa</span></div>
+        <div><b>51-70 <span class="u">m²</span></b><span>căn 2 ngủ, 3 ngủ thông thủy</span></div>
+        <div><b>5,4%</b><span>lãi vay NHCSXH, hạn mức ngân hàng xét</span></div>
+      </div>
+      <p class="dl"><span class="dot" aria-hidden="true"></span><span class="js-dl">Nhận hồ sơ từ 15/11 đến 15/12/2026</span></p>
+    </div>
+    <form class="card-form js-lead" data-form="Hero" novalidate>
+      <h3>Kiểm tra điều kiện & nhận tư vấn</h3>
+      <p class="sub">Chuyên viên gọi lại trong giờ làm việc, xem giúp anh/chị đủ điều kiện mua nhà ở xã hội chưa và cần chuẩn bị giấy tờ gì cho đợt 15/11 đến 15/12.</p>
+      <div class="sale-chip js-salechip"></div>
+      <div class="field"><label for="h-name">Họ và tên</label><input id="h-name" name="name" autocomplete="name" placeholder="Nguyễn Văn A" required></div>
+      <div class="field"><label for="h-phone">Số điện thoại</label><input id="h-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx" required></div>
+      <div class="row2">
+        <div class="field"><label for="h-need">Anh/chị quan tâm</label>
+          <select id="h-need" name="need"><option>Mua để ở</option><option>Thuê hoặc thuê mua</option><option>Mua cho gia đình (người đứng tên phải đủ điều kiện)</option><option>Tìm hiểu điều kiện, hồ sơ</option></select></div>
+        <div class="field"><label for="h-group">Anh/chị đang là</label>
+          <select id="h-group" name="group" class="js-groupsel"></select></div>
+      </div>
+      <div class="field"><label for="h-unit">Loại căn hộ anh/chị cần</label><select id="h-unit" name="unit" class="js-unitsel"></select></div>
+      <button class="btn btn-red" type="submit">Gửi thông tin nhờ tư vấn</button>
+      <p class="form-msg" role="status"></p>
+      <p class="fine">Gửi đi nghĩa là anh/chị đồng ý để D-Holdings liên hệ tư vấn dự án Cát Tường Smart City và nhận kèm kết quả kiểm tra, bảng tính anh/chị vừa làm trên trang. Đây không phải đơn mua: đơn Mẫu 01 nộp cho chủ đầu tư.</p>
+    </form>
+  </div>
+</section>
+
+<section class="sec band-red" id="chinh-sach">
+  <svg class="towers" viewBox="0 0 620 580" aria-hidden="true"><use href="#tw"/></svg>
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Đợt nhận hồ sơ 15/11 – 15/12/2026</p><h2>Giá & cách mua, thuê, thuê mua</h2></div>
+    <div class="policy">
+      <div class="policy-box">
+        <ul>
+          <li><span>Giá Sở Xây dựng công khai (do chủ đầu tư quyết định), tòa M, P, Q, R, S, T: căn thường <strong>15.990.253 đ/m²</strong>, căn góc 16.310.058 đ/m², căn cạnh thang máy 15.670.448 đ/m². Giá này <strong>chưa gồm VAT 5% và phí bảo trì 2%</strong>.</span></li>
+          <li><span>Cộng VAT và bảo trì, căn thường khoảng <strong>17,11 triệu/m²</strong>. Tính thử theo diện tích thông thủy: căn 3 ngủ 70 m² khoảng 1,20 tỷ, căn 2 ngủ 51 m² khoảng 873 triệu. Cách tính giá chính thức theo hợp đồng của chủ đầu tư.</span></li>
+          <li><span>Đợt mới <strong>215 căn</strong> bán, cho thuê, thuê mua tại 7 tòa M1, M2, P, Q, R, S, T. Nhận hồ sơ <strong>15/11 đến 15/12/2026</strong> (theo báo Tiền Phong, CafeF ngày 29/10/2026).</span></li>
+          <li><span>Hồ sơ nộp <strong>cho chủ đầu tư</strong> theo hình thức và địa điểm trong thông báo của chủ đầu tư. Tiền chỉ nộp vào tài khoản chủ đầu tư và lấy phiếu thu. Trình tự nhận hồ sơ theo luật không có bước nộp tiền giữ chỗ hay phí ưu tiên; ai đòi thì hỏi lại chủ đầu tư.</span></li>
+          <li><span>Hồ sơ hợp lệ nhiều hơn số căn thì <strong>bốc thăm</strong>, trừ các nhóm ưu tiên theo Điều 38 Nghị định 100/2024 (sửa bởi Nghị định 54/2026). Căn cụ thể theo kết quả bốc thăm và quy chế của chủ đầu tư.</span></li>
+        </ul>
+        <a class="btn btn-gold" href="#dang-ky" style="justify-self:start">Nhờ chuyên viên tư vấn</a>
+      </div>
+      <div class="plans">
+        <div class="plan"><h3>Mua</h3><p>Trả toàn bộ, hoặc vay Ngân hàng Chính sách xã hội 5,4%/năm, tối đa 80% giá trị hợp đồng, thời hạn tối đa 25 năm. Ký hợp đồng mua với chủ đầu tư xong mới làm hồ sơ vay. Vay được bao nhiêu là ngân hàng xét duyệt.</p></div>
+        <div class="plan"><h3>Thuê</h3><p>93.287 đ/m²/tháng cho căn thường, theo bảng Sở Xây dựng (bảng chưa ghi rõ đã gồm VAT hay chưa). Số căn cho thuê trong đợt chưa công bố riêng, chuyên viên hỏi chủ đầu tư giúp anh/chị.</p></div>
+        <div class="plan"><h3>Thuê mua</h3><p>Điều kiện như khi mua. Trả trước tối đa 50%, phần còn lại trả dần hằng tháng như tiền thuê, tối thiểu 5 năm. Trả hết thì căn hộ thuộc về mình.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="tong-quan">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Tổng quan dự án</p><h2>Có tòa <span style="color:var(--red)">đã có người ở</span></h2></div>
+    <div class="ov">
+      <div>
+        <table class="spec">
+          <tr><th>Tên dự án</th><td>Khu nhà ở xã hội Cát Tường Smart City</td></tr>
+          <tr><th>Chủ đầu tư</th><td>Công ty Cổ phần Cát Tường</td></tr>
+          <tr><th>Phân phối</th><td>D-Holdings</td></tr>
+          <tr><th>Vị trí</th><td>Xã Yên Trung và xã Tam Đa (huyện Yên Phong cũ), thành phố Bắc Ninh, trong vùng khu công nghiệp Yên Phong</td></tr>
+          <tr><th>Quy mô</th><td>Khoảng 9,4 ha, 9 khối nhà ở xã hội K, L, M, O, P, Q, R, S, T, tổng 1.040 căn</td></tr>
+          <tr><th>Tầng điển hình</th><td>Tầng 2 đến 9 các tòa O, P, Q, R, T: 11 căn mỗi sàn, gồm 10 căn 3 ngủ và 1 căn 2 ngủ</td></tr>
+          <tr><th>Loại căn</th><td>2 ngủ 51,0-51,1 m², 3 ngủ 68,4-70,0 m² thông thủy</td></tr>
+          <tr><th>Hiện trạng</th><td>Tháng 5/2026 chuyên viên Quang Giang lên xem tòa M2: đã có cư dân và có phí dịch vụ. Ảnh flycam tháng 4/2026: có khối đã hoàn thiện, có khối đang thi công</td></tr>
+        </table>
+        <div class="towers4">
+          <div><b class="tnum">1.040</b><span>căn toàn dự án</span></div>
+          <div><b class="tnum">478</b><span>căn còn lại (Sở, 24/9/2026)</span></div>
+          <div><b class="tnum">215</b><span>căn đợt 15/11</span></div>
+          <div><b>7 tòa</b><span>M1, M2, P, Q, R, S, T</span></div>
+        </div>
+      </div>
+      <figure><img src="img/phoi-canh-danh-so.jpg" alt="Phối cảnh toàn khu có đánh tên các tòa" loading="lazy" class="js-zoom"><figcaption>Phối cảnh toàn khu, có tên từng tòa. Cát Tường Smart City gồm các khối K, L, M (M1, M2), O, P, Q, R, S, T.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec band-red" id="hinh-anh">
+  <svg class="towers" viewBox="0 0 620 580" aria-hidden="true" style="left:-80px;right:auto;transform:scaleX(-1)"><use href="#tw"/></svg>
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Hình ảnh thực tế</p><h2>Nhìn từ trên cao</h2><p class="lead">Ảnh flycam tháng 4/2026 trong tài liệu dự án của chủ đầu tư: có khối đã hoàn thiện, có khối đang thi công.</p></div>
+    <div class="gal">
+      <figure class="wide js-zoom" data-src="img/fly-1.jpg"><img src="img/fly-1.jpg" alt="Flycam toàn khu Cát Tường Smart City" loading="lazy"><figcaption>Toàn khu nhìn từ trên cao</figcaption></figure>
+      <figure class="js-zoom" data-src="img/fly-2.jpg"><img src="img/fly-2.jpg" alt="Flycam các khối nhà và công trường" loading="lazy"><figcaption>Các khối nhà và phần đang thi công</figcaption></figure>
+      <figure class="js-zoom" data-src="img/fly-3.jpg"><img src="img/fly-3.jpg" alt="Flycam dãy nhà và khu dân cư xung quanh" loading="lazy"><figcaption>Dãy nhà phố và khu dân cư xung quanh</figcaption></figure>
+      <figure class="js-zoom" data-src="img/fly-4.jpg"><img src="img/fly-4.jpg" alt="Flycam tòa nhà bên hồ" loading="lazy"><figcaption>Tòa nhà bên hồ</figcaption></figure>
+      <figure class="js-zoom" data-src="img/fly-5.jpg"><img src="img/fly-5.jpg" alt="Flycam các tòa nhà ở xã hội" loading="lazy"><figcaption>Các tòa nhà ở xã hội</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="mat-bang">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Mặt bằng</p><h2>Phối cảnh & tầng điển hình</h2></div>
+    <div class="tabs" role="tablist" data-group="mb">
+      <button class="tab" role="tab" aria-selected="true" data-panel="mb-1">Tầng 2-9 tòa P</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="mb-2">Tầng 2-9 tòa O, P, Q, R, T</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="mb-3">Phối cảnh các tòa</button>
+    </div>
+    <div class="panel" id="mb-1" role="tabpanel"><img src="img/mb-p.jpg" alt="Mặt bằng tầng 2-9 nhà P, màu xanh là căn 3 ngủ, màu cam là căn 2 ngủ" loading="lazy" class="js-zoom"><p class="fine" style="margin-top:8px">Màu xanh: căn 3 ngủ. Màu cam: căn 2 ngủ (căn số 03). Bấm vào ảnh để xem diện tích từng căn.</p></div>
+    <div class="panel" id="mb-2" role="tabpanel" hidden><img src="img/mb-opqrt.jpg" alt="Mặt bằng tầng 2-9 các nhà O, P, Q, R, T kèm bảng diện tích từng căn" loading="lazy" class="js-zoom"><p class="fine" style="margin-top:8px">Chưa có mặt bằng các tòa M1, M2, S, sẽ bổ sung khi có tài liệu chủ đầu tư. Tòa O không nằm trong 7 tòa của đợt này và có giá riêng.</p></div>
+    <div class="panel" id="mb-3" role="tabpanel" hidden><img src="img/phoi-canh-danh-so.jpg" alt="Phối cảnh toàn khu đánh tên các tòa" loading="lazy" class="js-zoom"></div>
+  </div>
+</section>
+
+<section class="sec band-white" id="can-ho">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Căn hộ điển hình</p><h2>Căn 2 ngủ và 3 ngủ, từ 51 đến 70 <span class="u">m²</span></h2><p class="lead">Diện tích theo mặt bằng tầng 2-9 các tòa O, P, Q, R, T của chủ đầu tư. Giá tham khảo tính theo diện tích thông thủy nhân giá căn thường Sở Xây dựng công khai.</p></div>
+    <div class="tabs js-unit-tabs" role="tablist" data-group="unit"></div>
+    <div class="unit">
+      <img class="js-unit-img js-zoom" src="img/can-3pn.jpg" alt="" loading="lazy" style="border-radius:12px;background:var(--white);border:1px solid var(--platinum)">
+      <div class="unit-info">
+        <p class="eyebrow js-unit-share"></p>
+        <h3 class="js-unit-name"></h3>
+        <div class="area tnum"><div><b class="js-unit-tt"></b><span>Diện tích thông thủy</span></div><div><b class="js-unit-tim"></b><span>Diện tích xây dựng</span></div></div>
+        <p class="fine js-unit-note" hidden></p>
+        <p class="unit-price tnum">Giá căn thường (chưa VAT, bảo trì): <b class="js-unit-price"></b></p>
+        <p class="unit-price tnum">Tổng gồm VAT 5% và bảo trì 2%: <b class="js-unit-total"></b></p>
+        <p class="unit-price tnum">Vốn tự có nếu vay 80% (mức tối đa, ngân hàng xét duyệt, vốn vay năm 2026 đang căng): <b class="js-unit-own"></b></p>
+        <a class="btn btn-red js-unit-calc" href="#dong-tien" style="justify-self:start">Tính tiền căn này</a>
+      </div>
+    </div>
+    <p class="fine" style="margin-top:14px">Hình mặt bằng 3D mang tính minh họa. Số tiền tính thử theo diện tích thông thủy; cách tính giá chính thức theo hợp đồng của chủ đầu tư.</p>
+  </div>
+</section>
+
+<section class="sec" id="ban-giao">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Bên trong căn hộ</p><h2>Căn đã có người ở <span style="color:var(--red)">trông thế nào</span></h2><p class="lead">Căn chuyên viên Quang Giang lên xem tháng 5/2026 ở tòa M2 có sẵn tủ bếp, bếp, máy hút mùi, sàn gỗ, giường và tủ quần áo. Đồ nội thất có nằm trong giá hay bán riêng, có bắt buộc không, giá bao nhiêu: chưa có văn bản, đang hỏi chủ đầu tư.</p></div>
+    <div class="gal4">
+      <figure class="js-zoom" data-src="img/that-1.jpg"><img src="img/that-1.jpg" alt="Ảnh thực tế phòng khách và bàn ăn" loading="lazy"><figcaption>Ảnh thực tế · phòng khách</figcaption></figure>
+      <figure class="js-zoom" data-src="img/that-2.jpg"><img src="img/that-2.jpg" alt="Ảnh thực tế phòng ngủ có bàn học" loading="lazy"><figcaption>Ảnh thực tế · phòng ngủ</figcaption></figure>
+      <figure class="js-zoom" data-src="img/that-3.jpg"><img src="img/that-3.jpg" alt="Ảnh thực tế phòng ngủ có điều hòa" loading="lazy"><figcaption>Ảnh thực tế · phòng ngủ</figcaption></figure>
+      <figure class="js-zoom" data-src="img/that-5.jpg"><img src="img/that-5.jpg" alt="Ảnh thực tế phòng ngủ lớn" loading="lazy"><figcaption>Ảnh thực tế · phòng ngủ lớn</figcaption></figure>
+    </div>
+    <div class="gal4 land">
+      <figure class="js-zoom" data-src="img/noi-that-1.jpg"><img src="img/noi-that-1.jpg" alt="Phối cảnh 3D phòng khách" loading="lazy"><figcaption>Phối cảnh 3D · phòng khách</figcaption></figure>
+      <figure class="js-zoom" data-src="img/noi-that-2.jpg"><img src="img/noi-that-2.jpg" alt="Phối cảnh 3D bếp và bàn ăn" loading="lazy"><figcaption>Phối cảnh 3D · bếp, bàn ăn</figcaption></figure>
+      <figure class="js-zoom" data-src="img/noi-that-3.jpg"><img src="img/noi-that-3.jpg" alt="Phối cảnh 3D phòng ngủ" loading="lazy"><figcaption>Phối cảnh 3D · phòng ngủ</figcaption></figure>
+      <figure class="js-zoom" data-src="img/noi-that-4.jpg"><img src="img/noi-that-4.jpg" alt="Phối cảnh 3D góc học tập" loading="lazy"><figcaption>Phối cảnh 3D · góc học tập</figcaption></figure>
+    </div>
+    <p class="fine" style="margin-top:14px">Ảnh thực tế và phối cảnh 3D trong tài liệu dự án. Phối cảnh 3D mang tính minh họa; căn trong ảnh thực tế có thể đã được trang bị thêm. Đồ bàn giao chính thức theo hợp đồng của từng đợt.</p>
+  </div>
+</section>
+
+<section class="sec band-red" id="dong-tien">
+  <svg class="towers" viewBox="0 0 620 580" aria-hidden="true"><use href="#tw"/></svg>
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Công cụ tính</p><h2>Cần chuẩn bị bao nhiêu tiền</h2><p class="lead">Chọn căn, loại giá và cách trả, bảng tự tính số tiền. Số liệu ước tính để anh/chị chuẩn bị tài chính.</p></div>
+    <div class="calc">
+      <div class="calc-in">
+        <div class="field"><label for="c-unit">Căn hộ</label><select id="c-unit"></select></div>
+        <div class="field"><label for="c-price">Loại giá (Sở Xây dựng công khai, chưa VAT)</label>
+          <select id="c-price"><option value="15.990253" selected>Căn thường · 15,99 triệu/m²</option><option value="16.310058">Căn góc · 16,31 triệu/m²</option><option value="15.670448">Căn cạnh thang máy · 15,67 triệu/m²</option></select></div>
+        <div class="field"><span style="font-size:13px;font-weight:500">Cách trả</span>
+          <div class="seg seg2" role="group" aria-label="Cách trả">
+            <button type="button" data-plan="cash" aria-pressed="false">Trả toàn bộ<br>không vay</button>
+            <button type="button" data-plan="loan" aria-pressed="true">Vay Ngân hàng<br>Chính sách xã hội</button>
+          </div></div>
+        <div class="loan js-loanbox">
+          <div class="field"><label for="c-ltv">Tỷ lệ vay trên giá trị hợp đồng</label><div class="range-row"><input id="c-ltv" type="range" min="10" max="80" step="5" value="70"><output class="tnum" id="c-ltv-out">70%</output></div></div>
+          <div class="row2">
+            <div class="field"><label for="c-rate">Lãi suất (%/năm)</label><input id="c-rate" type="number" min="0" max="20" step="0.1" value="5.4" inputmode="decimal"></div>
+            <div class="field"><label for="c-years">Thời hạn vay (năm)</label><input id="c-years" type="number" min="1" max="25" step="1" value="25" inputmode="numeric"></div>
+          </div>
+          <p class="fine">Mặc định 5,4%/năm, tối đa 80% giá trị hợp đồng và 25 năm: mức Ngân hàng Chính sách xã hội cho vay mua nhà ở xã hội (Nghị định 100/2024, sửa bởi Nghị định 261/2025). Vay được bao nhiêu là ngân hàng xét duyệt theo thu nhập và hồ sơ.</p>
+        </div>
+      </div>
+      <div class="calc-out">
+        <div class="total tnum">
+          <div><span>Giá căn (chưa VAT)</span><b id="o-base">-</b></div>
+          <div><span>VAT 5% + bảo trì 2%</span><b id="o-tax">-</b></div>
+          <div class="hl"><span>Tổng cần thanh toán</span><b id="o-total">-</b></div>
+        </div>
+        <div class="sched-wrap"><table class="sched tnum"><thead><tr><th>Khoản</th><th>Tỷ lệ</th><th>Số tiền</th></tr></thead><tbody id="o-rows"></tbody></table></div>
+        <div class="monthly js-monthly"><span>Trả góp tháng đầu, giảm dần về sau<br><span class="fine">gốc chia đều, lãi tính trên dư nợ còn lại</span></span><b class="tnum" id="o-month">-</b></div>
+        <p class="fine">Tính thử theo diện tích thông thủy. Chưa tính nội thất (nếu có), phí dịch vụ, công chứng, bảo hiểm. Tiền góp thật theo hợp đồng tín dụng. Năm 2026 vốn vay ưu đãi ở Bắc Ninh đang căng, ký hợp đồng rồi vẫn có thể phải chờ giải ngân, nên chuẩn bị thêm phương án tiền tự có.</p>
+        <a class="btn btn-red js-send-calc" href="#dang-ky" style="justify-self:start">Gửi bảng tính này cho chuyên viên</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="dieu-kien">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Kiểm tra nhanh</p><h2>Anh/chị có đủ điều kiện mua NOXH?</h2><p class="lead">Trả lời 3 câu để biết kết quả sơ bộ và giấy tờ cần chuẩn bị. Chuyên viên sẽ rà lại hồ sơ cụ thể.</p></div>
+    <div class="elig">
+      <div class="quiz">
+        <div class="q"><p class="q-title"><i>1</i>Anh/chị thuộc nhóm nào?</p>
+          <div class="field"><label for="q-group" class="fine">Chọn nhóm gần nhất với công việc, hoàn cảnh hiện tại</label><select id="q-group" class="js-groupsel"></select></div></div>
+        <div class="q"><p class="q-title"><i>2</i>Tình trạng nhà ở tại Bắc Ninh</p>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="q-house" value="none">Chưa có nhà đứng tên tại Bắc Ninh</label>
+            <label class="opt"><input type="radio" name="q-house" value="small">Có nhà nhưng bình quân dưới 15 m² sàn/người</label>
+            <label class="opt"><input type="radio" name="q-house" value="far">Có nhà nhưng cách nơi làm việc từ 20 km trở lên (nơi làm việc cách dự án không quá 10 km)</label>
+            <label class="opt"><input type="radio" name="q-house" value="enough">Có nhà, bình quân từ 15 m² sàn/người trở lên</label>
+          </div></div>
+        <div class="q js-incq"><p class="q-title"><i>3</i>Thu nhập bình quân mỗi tháng</p>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="q-mar" value="single">Độc thân</label>
+            <label class="opt"><input type="radio" name="q-mar" value="single-kid">Độc thân, đang nuôi con chưa thành niên</label>
+            <label class="opt"><input type="radio" name="q-mar" value="married">Đã kết hôn (tính tổng thu nhập 2 vợ chồng)</label>
+          </div>
+          <div class="field"><label for="q-income">Thu nhập bình quân thực nhận (triệu đồng/tháng)</label><input id="q-income" type="number" min="0" step="0.5" inputmode="decimal" placeholder="vd 18"></div>
+        </div>
+      </div>
+      <div class="verdict js-verdict">
+        <span class="badge">Chưa có kết quả</span>
+        <h3>Trả lời các câu bên cạnh</h3>
+        <p class="fine">Kết quả hiện ở đây.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec band-red" id="lo-trinh">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Lịch đợt này</p><h2>Nộp hồ sơ từ 15/11 đến 15/12/2026</h2></div>
+    <ol class="road js-road">
+      <li data-d="2026-09-24"><b>24/9/2026</b><span>Sở Xây dựng công khai dự án trong danh sách nhà ở xã hội đủ điều kiện bán, cho thuê</span></li>
+      <li data-d="2026-10-29"><b>29/10/2026</b><span>Báo đưa tin đợt 215 căn tại 7 tòa M1, M2, P, Q, R, S, T</span></li>
+      <li data-d="2026-11-15"><b>15/11/2026</b><span>Bắt đầu nhận hồ sơ, nộp cho chủ đầu tư theo thông báo của chủ đầu tư</span></li>
+      <li data-d="2026-12-15"><b>15/12/2026</b><span>Hết hạn nhận hồ sơ đợt này</span></li>
+      <li data-d="2026-12-16"><b>Sau đó</b><span>Chủ đầu tư gửi danh sách để Sở Xây dựng rà trùng (khoảng 10 ngày), rồi công khai danh sách đủ điều kiện. Hồ sơ hợp lệ nhiều hơn số căn thì bốc thăm, có Sở, UBND xã, Công an xã giám sát. Sau đó ký hợp đồng</span></li>
+    </ol>
+    <div class="steps4">
+      <div><b>1. Xác nhận đối tượng, thu nhập</b><span>Có hợp đồng lao động: nơi làm việc ký Mẫu 01a. Không có hợp đồng lao động, không hưởng lương hưu: tự kê khai Mẫu 05, Công an xã xác nhận trong 7 ngày. Vợ hoặc chồng cũng kê khai.</span></div>
+      <div><b>2. Xác nhận về nhà ở</b><span>Mẫu 02 (chưa có nhà) do Văn phòng đăng ký đất đai xác nhận trong 7 ngày, hoặc Mẫu 03 (có nhà dưới 15 m² sàn/người) do UBND cấp xã nơi có nhà xác nhận, cũng trong 7 ngày.</span></div>
+      <div><b>3. Nộp đơn Mẫu 01</b><span>Nộp kèm giấy tờ cho chủ đầu tư trong thời gian nhận hồ sơ, theo hình thức và địa điểm trong thông báo của chủ đầu tư. Chuyên viên gửi thông báo khi tư vấn.</span></div>
+      <div><b>4. Ký hợp đồng rồi mới vay</b><span>Có tên trong danh sách được mua thì ký hợp đồng với chủ đầu tư, sau đó làm hồ sơ vay ngân hàng.</span></div>
+    </div>
+    <p class="lead" style="margin-top:28px">Giấy xác nhận có giá trị 12 tháng. Mẫu 01a thì tùy công ty, nên xin sớm để kịp nộp trong đợt này.</p>
+  </div>
+</section>
+
+<section class="sec band-white" id="nguon">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Nguồn số liệu</p><h2>Số liệu trên trang lấy từ đâu</h2></div>
+    <ul class="legal tnum">
+      <li><b>24/9/2026</b><div>Sở Xây dựng Bắc Ninh<span>Bảng dự án nhà ở xã hội đủ điều kiện kinh doanh tháng 9/2026: chủ đầu tư, 1.040 căn, giá bán, giá thuê. <a href="https://sxd.bacninh.gov.vn/news/-/details/191546/thong-tin-du-an-nha-o-xa-hoi-u-ieu-kien-kinh-doanh-thang-9-nam-2026-158296901" target="_blank" rel="noopener">Xem bảng</a></span></div></li>
+      <li><b>29/10/2026</b><div>Báo Tiền Phong, CafeF<span>Đợt 215 căn tại 7 tòa, giá từng loại căn, thời gian nhận hồ sơ 15/11 đến 15/12. <a href="https://tienphong.vn/cong-bo-ban-hang-nghin-can-nha-o-xa-hoi-gia-tu-hon-12-trieu-dongm-post1889551.tpo" target="_blank" rel="noopener">Tiền Phong</a> · <a href="https://cafef.vn/cong-bo-ban-hang-nghin-can-nha-o-xa-hoi-gia-tu-hon-12-trieu-dong-m-188261029123047456.chn" target="_blank" rel="noopener">CafeF</a></span></div></li>
+      <li><b>26/3/2026</b><div>VietnamFinance<span>Quy mô khoảng 9,4 ha, 9 khối nhà, chủ đầu tư Công ty Cổ phần Cát Tường. <a href="https://vietnamfinance.vn/noxh-cat-tuong-smart-city-mo-ban-dot-2-gia-tu-1567-trieu-dong-m2-d142076.html" target="_blank" rel="noopener">Xem bài</a></span></div></li>
+      <li><b>2026</b><div>Bộ tài liệu dự án<span>Mặt bằng tầng điển hình các tòa O, P, Q, R, T, phối cảnh, ảnh thực tế, flycam tháng 4/2026 do chủ đầu tư cung cấp cho đơn vị phân phối.</span></div></li>
+      <li><b>Luật</b><div>Điều kiện, vay vốn, bán lại<span>Luật Nhà ở 2023; Nghị định 100/2024, 261/2025, 54/2026, 136/2026; Thông tư 32/2025, 08/2026; Quyết định 28/2025/QĐ-UBND tỉnh Bắc Ninh.</span></div></li>
+    </ul>
+    <p class="fine" style="margin-top:16px">Bán lại: trong 5 năm kể từ khi trả đủ tiền, chỉ được bán lại cho chủ đầu tư hoặc người đủ điều kiện mua nhà ở xã hội, giá không quá giá mua (Điều 89 Luật Nhà ở 2023).</p>
+  </div>
+</section>
+
+<section class="sec" id="chuyen-vien" hidden>
+  <div class="wrap agent">
+    <figure class="agent-photo"><img class="js-a-photo" src="" alt="" loading="lazy"><figcaption><b class="js-a-name"></b><span class="js-a-title"></span></figcaption></figure>
+    <div class="agent-body">
+      <p class="eyebrow">Chuyên viên đồng hành cùng anh/chị</p>
+      <h2 class="js-a-name"></h2>
+      <p class="lead js-a-bio"></p>
+      <div class="agent-stats tnum js-a-stats"></div>
+      <div class="agent-cta">
+        <a class="btn btn-red js-tel" href="tel:0348558888">Gọi <span class="js-phone tnum">0348 558 888</span></a>
+        <a class="btn btn-gold js-zalo" href="https://zalo.me/0348558888" target="_blank" rel="noopener">Nhắn Zalo</a>
+        <a class="btn btn-ghost js-a-fb" href="#" target="_blank" rel="noopener" hidden style="color:var(--red)">Facebook</a>
+        <a class="btn btn-ghost js-a-tt" href="#" target="_blank" rel="noopener" hidden style="color:var(--red)">TikTok</a>
+        <a class="btn btn-ghost js-a-yt" href="#" target="_blank" rel="noopener" hidden style="color:var(--red)">YouTube</a>
+      </div>
+      <p class="agent-mail js-a-mailrow" hidden>Email: <b class="js-a-mail"></b></p>
+      <div class="deals js-a-help" hidden><h3>Anh/chị được hỗ trợ</h3>
+        <ul class="help-list">
+          <li><b>Kiểm tra điều kiện mua NOXH miễn phí</b><span>Xem nhóm đối tượng, nhà ở, thu nhập trước khi làm giấy tờ</span></li>
+          <li><b>Hướng dẫn từng giấy tờ</b><span>Mẫu đơn theo đúng nhóm đối tượng, xin xác nhận kịp đợt 15/11 đến 15/12</span></li>
+          <li><b>Tính tiền theo căn</b><span>Tổng giá gồm VAT, bảo trì, số tiền vay và trả góp hằng tháng</span></li>
+          <li><b>Hướng dẫn nộp hồ sơ đúng nơi</b><span>Hồ sơ nộp cho chủ đầu tư, tiền chỉ nộp vào tài khoản chủ đầu tư</span></li>
+        </ul>
+      </div>
+      <div class="deals"><h3>Giao dịch gần đây</h3><ol class="js-a-deals"></ol><p class="sample-note js-a-sample" hidden></p></div>
+      <blockquote class="agent-motto js-a-motto" hidden></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="sec band-red" id="dang-ky">
+  <svg class="towers" viewBox="0 0 620 580" aria-hidden="true"><use href="#tw"/></svg>
+  <div class="wrap contact">
+    <div class="contact-lines">
+      <p class="eyebrow">Liên hệ tư vấn</p>
+      <h2>Kiểm tra điều kiện trước khi nộp hồ sơ</h2>
+      <p class="lead">Gọi hoặc nhắn Zalo cho chuyên viên. Chúng tôi trả lời các câu hỏi về điều kiện, giấy tờ, số tiền cần chuẩn bị và loại căn phù hợp. Căn cụ thể theo kết quả bốc thăm và quy chế của chủ đầu tư.</p>
+      <div><a class="phone-big js-tel tnum" href="tel:0348558888"><span class="js-phone">0348 558 888</span></a></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn btn-gold js-zalo" href="https://zalo.me/0348558888" target="_blank" rel="noopener">Nhắn Zalo</a>
+        <button class="btn btn-ghost copy-btn js-copy" type="button">Sao chép số điện thoại</button>
+        <a class="btn btn-ghost" href="https://www.tiktok.com/@nguyenquanggiang.bds" target="_blank" rel="noopener">TikTok của Giang</a>
+        <a class="btn btn-ghost" href="https://www.youtube.com/@Chonnhacungquanggiang" target="_blank" rel="noopener">YouTube của Giang</a>
+      </div>
+      <p class="js-salename" style="color:#F3DCD6;font-size:14px"></p>
+    </div>
+    <form class="card-form js-lead" data-form="Cuối trang" novalidate>
+      <h3>Nhờ chuyên viên tư vấn</h3>
+      <div class="sale-chip js-salechip"></div>
+      <div class="field"><label for="f-name">Họ và tên</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="f-phone">Số điện thoại</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+      <div class="row2">
+        <div class="field"><label for="f-need">Anh/chị quan tâm</label><select id="f-need" name="need"><option>Mua để ở</option><option>Thuê hoặc thuê mua</option><option>Mua cho gia đình (người đứng tên phải đủ điều kiện)</option><option>Tìm hiểu điều kiện, hồ sơ</option></select></div>
+        <div class="field"><label for="f-group">Anh/chị đang là</label><select id="f-group" name="group" class="js-groupsel"></select></div>
+      </div>
+      <div class="field"><label for="f-unit">Loại căn hộ anh/chị cần</label><select id="f-unit" name="unit" class="js-unitsel"></select></div>
+      <div class="field"><label for="f-note">Ghi chú (không bắt buộc)</label><input id="f-note" name="note" placeholder="vd: quan tâm căn 3 ngủ"></div>
+      <button class="btn btn-red" type="submit">Gửi thông tin nhờ tư vấn</button>
+      <p class="form-msg" role="status"></p>
+      <p class="fine" style="color:var(--muted)">Gửi đi nghĩa là anh/chị đồng ý để D-Holdings liên hệ tư vấn và nhận kèm kết quả kiểm tra, bảng tính anh/chị vừa làm trên trang. Đây không phải đơn mua: đơn Mẫu 01 nộp cho chủ đầu tư.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/dh-logo-dark.png" alt="D-Holdings" width="96" height="88">
+    <div>
+      <p><b>Công ty CP Đầu tư và Dịch vụ Bất động sản D-Holdings</b> · Đơn vị phân phối dự án Cát Tường Smart City</p>
+      <p>Trụ sở: Tòa nhà D-Holdings, Lô 8 ALK24, Khu đô thị phía Nam, đường Trần Nhân Tông, phường Bắc Giang, tỉnh Bắc Ninh</p>
+      <p>MST 2401037120 · Email dholdings999@gmail.com · d-holdingsgroup.com</p>
+    </div>
+    <p class="disclaimer">Trang tư vấn của chuyên viên D-Holdings, không phải trang của chủ đầu tư. Thông tin, hình ảnh mang tính tham khảo, tổng hợp từ bảng công khai của Sở Xây dựng Bắc Ninh (9/2026), báo Tiền Phong, CafeF (29/10/2026) và tài liệu dự án của chủ đầu tư Công ty CP Cát Tường, tại thời điểm 11/2026. Giá bán, điều kiện và thời gian nhận hồ sơ chính thức theo công bố của chủ đầu tư và cơ quan nhà nước có thẩm quyền.</p>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Liên hệ nhanh">
+  <a class="d-call js-tel" href="tel:0348558888">Gọi ngay</a>
+  <a class="d-zalo js-zalo" href="https://zalo.me/0348558888" target="_blank" rel="noopener">Zalo</a>
+  <a class="d-reg" href="#dang-ky">Nhờ tư vấn</a>
+</nav>
+
+<div class="lb" role="dialog" aria-modal="true" aria-label="Xem ảnh lớn"><button type="button" aria-label="Đóng">×</button><img alt=""></div>
+
+<script>
+/* ====== CẤU HÌNH - sửa ở đây ====== */
+var LEAD_ENDPOINT = "";  // CHƯA NỐI: cần Google Sheet "Khách Cát Tường" + Apps Script "Nhận khách Cát Tường" (giống Vân Trung), sếp bấm cho phép rồi dán URL /exec vào đây
+var PROJECT = "Cát Tường Smart City";
+var DEFAULT_CONTACT = { name: "Quang Giang", phone: "0348558888" };
+var DEFAULT_SALE = "quanggiang";
+var SALES = {
+  quanggiang: { name: "Nguyễn Quang Giang", title: "Quản lý kinh doanh", phone: "0348558888", email: "nguyenquanggiang.bds@gmail.com", facebook: "https://www.facebook.com/quanggiang.nguyen.75", photo: "img/sale-quanggiang.jpg", avatar: "img/sale-quanggiang-avatar.jpg", tiktok: "https://www.tiktok.com/@nguyenquanggiang.bds", youtube: "https://www.youtube.com/@Chonnhacungquanggiang" }
+};
+var DEFAULT_BIO = "Chuyên viên tư vấn dự án Cát Tường Smart City tại D-Holdings. Hỗ trợ anh/chị kiểm tra điều kiện mua nhà ở xã hội, chuẩn bị hồ sơ, tính số tiền cần chuẩn bị và chọn căn phù hợp.";
+var OPEN = new Date(2026, 10, 15), CLOSE = new Date(2026, 11, 15);
+/* ================================== */
+
+/* Diện tích theo mặt bằng tầng 2-9 các nhà O, P, Q, R, T (bộ tài liệu chủ đầu tư) */
+var UNITS = [
+  { id: "2pn", name: "2 ngủ", tt: 51.0, ttMax: 51.1, tim: 55.2, img: "img/can-2pn.jpg", share: "1 căn mỗi sàn (căn số 03)" },
+  { id: "3pn", name: "3 ngủ", tt: 68.4, ttMax: 70.0, tim: 74.4, timMax: 74.7, img: "img/can-3pn.jpg", share: "10 căn mỗi sàn", note: "Thông thủy 68,4-70,0 m² tùy căn." }
+];
+var CALC_UNITS = [
+  { name: "2 ngủ", tt: 51.0, u: 0 }, { name: "3 ngủ", tt: 68.4, u: 1 }, { name: "3 ngủ", tt: 70.0, u: 1 }
+];
+var GIA_THUONG = 15.990253;
+var GROUPS = [
+  ["", "Chọn nhóm"],
+  ["6", "Công nhân, người lao động trong/ngoài KCN"],
+  ["5", "Người thu nhập thấp tại đô thị"],
+  ["8", "Cán bộ, công chức, viên chức"],
+  ["7", "Lực lượng vũ trang (quân đội, công an)"],
+  ["1", "Người có công, thân nhân liệt sĩ"],
+  ["4", "Hộ nghèo, cận nghèo tại đô thị"],
+  ["2", "Hộ nghèo, cận nghèo tại nông thôn"],
+  ["3", "Hộ nghèo, cận nghèo vùng thiên tai, biến đổi khí hậu"],
+  ["9", "Người đã trả lại nhà ở công vụ"],
+  ["10", "Hộ bị thu hồi đất, chưa được bồi thường nhà/đất ở"],
+  ["13", "Có từ 02 con đẻ trở lên"],
+  ["x", "Không thấy nhóm phù hợp"]
+];
+
+function $(s, r) { return (r || document).querySelector(s); }
+function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+function vnd(n) {
+  if (!isFinite(n)) return "-";
+  if (n >= 1e9) return (n / 1e9).toLocaleString("vi-VN", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " tỷ";
+  if (n < 1e8) return (n / 1e6).toLocaleString("vi-VN", { maximumFractionDigits: 1 }) + " triệu";
+  return Math.round(n / 1e6).toLocaleString("vi-VN") + " triệu";
+}
+function vndRange(a, b) {
+  if (Math.abs(b - a) < 2e6) return "khoảng " + vnd((a + b) / 2);
+  if (a >= 1e9) return (a / 1e9).toLocaleString("vi-VN", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + "-" + (b / 1e9).toLocaleString("vi-VN", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " tỷ";
+  if (b < 1e9) return Math.round(a / 1e6).toLocaleString("vi-VN") + "-" + Math.round(b / 1e6).toLocaleString("vi-VN") + " triệu";
+  return vnd(a) + " - " + vnd(b);
+}
+function m2(a, b) { return a.toLocaleString("vi-VN", { minimumFractionDigits: 1 }) + (b && b !== a ? "-" + b.toLocaleString("vi-VN", { minimumFractionDigits: 1 }) : ""); }
+function groupLabel(v) { for (var i = 0; i < GROUPS.length; i++) if (GROUPS[i][0] === v) return GROUPS[i][1]; return ""; }
+function prettyPhone(p) { return p.replace(/^(\d{4})(\d{3})(\d+)$/, "$1 $2 $3"); }
+
+/* ---- dem ngay toi dot nhan ho so ---- */
+(function () {
+  var now = new Date(); now.setHours(0, 0, 0, 0); var day = 864e5, t = $(".js-dl"), tag = "", idx = -1;
+  if (now < OPEN) { t.textContent = "Còn " + Math.round((OPEN - now) / day) + " ngày đến ngày nhận hồ sơ 15/11/2026"; idx = 2; tag = "Còn " + Math.round((OPEN - now) / day) + " ngày"; }
+  else if (now <= CLOSE) { var l = Math.round((CLOSE - now) / day); t.textContent = l > 0 ? "Đang nhận hồ sơ, còn " + l + " ngày (hạn 15/12/2026)" : "Hôm nay là ngày cuối nhận hồ sơ đợt này"; idx = 2; tag = "Đang nhận hồ sơ"; }
+  else { t.textContent = "Đợt 15/11 đến 15/12/2026 đã đóng. Hỏi chuyên viên về đợt tiếp theo"; idx = 4; tag = "Đang diễn ra"; }
+  var li = $$(".js-road li")[idx]; if (li) { li.className = "now"; var em = document.createElement("em"); em.className = "now-tag"; em.textContent = tag; li.appendChild(em); }
+})();
+
+/* ---- sale attribution ---- */
+var params = new URLSearchParams(location.search);
+/* ---- nguon khach: utm tren link, ma quang cao, trang dan sang; giu lan gan nhat 30 ngay ---- */
+var NGUON = (function () {
+  var KEY = "nguon-cattuong", p = params, cu = null, h = "";
+  try { cu = JSON.parse(localStorage.getItem(KEY) || "null"); } catch (e) {}
+  try { if (document.referrer) { h = new URL(document.referrer).hostname; if (h === location.hostname) h = ""; } } catch (e) {}
+  var tuRef = !h ? "" : /facebook|fb\.(com|me)|messenger/.test(h) ? "facebook" : /instagram/.test(h) ? "instagram" : /zalo/.test(h) ? "zalo"
+    : /tiktok/.test(h) ? "tiktok" : /youtube|youtu\.be/.test(h) ? "youtube" : /(^|\.)google\./.test(h) ? "google" : /coccoc/.test(h) ? "coccoc" : h.replace(/^www\./, "");
+  var qcGoogle = p.get("gclid") || p.get("gbraid") || p.get("wbraid"), qcTiktok = p.get("ttclid");
+  var src = p.get("utm_source") || (qcGoogle ? "google" : qcTiktok ? "tiktok" : p.get("fbclid") ? "facebook" : "") || tuRef;
+  var qc = qcGoogle || qcTiktok || /^(cpc|ppc|paid|paid_social|ads?)$/i.test(p.get("utm_medium") || "");
+  if (src) {
+    var nay = { src: src + (qc ? " (quảng cáo)" : ""), camp: [p.get("utm_campaign"), p.get("utm_content"), p.get("utm_term")].filter(Boolean).join(" | "),
+                page: location.href.split("#")[0], t: Date.now() };
+    try { localStorage.setItem(KEY, JSON.stringify(nay)); } catch (e) {}
+    return nay;
+  }
+  if (cu && cu.t && Date.now() - cu.t < 30 * 864e5) { var d = new Date(cu.t); return { src: cu.src + " (lần trước " + d.getDate() + "/" + (d.getMonth() + 1) + ")", camp: cu.camp, page: cu.page }; }
+  return { src: "không rõ", camp: "", page: location.href.split("#")[0] };
+})();
+var saleCode = (params.get("sale") || "").toLowerCase();
+if (!saleCode && /^#sale-/.test(location.hash)) saleCode = location.hash.slice(6).toLowerCase();
+if (!SALES[saleCode]) saleCode = SALES[DEFAULT_SALE] ? DEFAULT_SALE : "";
+var sale = SALES[saleCode] || null;
+var contact = sale || DEFAULT_CONTACT;
+var ROLE = (sale && sale.role) || "";
+function roleize(t) { if (!ROLE) return t; return t.replace(/[Cc]huyên viên tư vấn/g, ROLE).replace(/[Cc]huyên viên/g, ROLE); }
+$$(".js-tel").forEach(function (a) { a.href = "tel:" + contact.phone; });
+$$(".js-zalo").forEach(function (a) { a.href = "https://zalo.me/" + (contact.zalo || contact.phone); });
+$$(".js-phone").forEach(function (s) { s.textContent = prettyPhone(contact.phone); });
+if (sale) {
+  $$(".js-salechip").forEach(function (c) {
+    c.innerHTML = (sale.avatar ? "<img alt=''>" : "") + "<div><small>Chuyên viên tư vấn</small><b></b><span class='sc-tel'></span></div>" + (sale.photo ? "<a href='#chuyen-vien'>Xem hồ sơ</a>" : "");
+    if (sale.avatar) { c.querySelector("img").src = sale.avatar; c.querySelector("img").alt = sale.name; }
+    c.querySelector("b").textContent = sale.name; c.querySelector(".sc-tel").textContent = prettyPhone(sale.phone);
+    c.classList.add("show");
+  });
+  $(".js-salename").textContent = "Chuyên viên phụ trách: " + sale.name;
+  if (sale.avatar) { var dc = $(".dock .d-call"); var di = document.createElement("img"); di.src = sale.avatar; di.alt = ""; dc.insertBefore(di, dc.firstChild); }
+  renderAgent(sale);
+}
+function renderAgent(s) {
+  if (!s.photo && !s.bio && !(s.deals && s.deals.length)) return;
+  if (!s.bio) s.bio = DEFAULT_BIO;
+  if (s.facebook) { var fb = $(".js-a-fb"); fb.href = s.facebook; fb.hidden = false; }
+  if (s.tiktok) { var tt = $(".js-a-tt"); tt.href = s.tiktok; tt.hidden = false; }
+  if (s.youtube) { var yt = $(".js-a-yt"); yt.href = s.youtube; yt.hidden = false; }
+  var sec = $("#chuyen-vien"); sec.hidden = false; $(".js-nav-agent").hidden = false;
+  var im = $(".js-a-photo", sec); if (s.photo) { im.src = s.photo; im.alt = "Chân dung " + s.name; } else { $(".agent-photo", sec).hidden = true; }
+  $$(".js-a-name", sec).forEach(function (n) { n.textContent = s.name; });
+  $(".js-a-title", sec).textContent = s.title || "Chuyên viên tư vấn D-Holdings";
+  $(".js-a-bio", sec).textContent = s.bio || "";
+  var st = $(".js-a-stats", sec);
+  (s.stats || []).slice(0, 3).forEach(function (x) {
+    var d = document.createElement("div"), b = document.createElement("b"), sp = document.createElement("span");
+    b.textContent = x[0]; sp.textContent = x[1]; d.appendChild(b); d.appendChild(sp); st.appendChild(d);
+  });
+  st.hidden = !(s.stats && s.stats.length);
+  if (s.email) { $(".js-a-mail", sec).textContent = s.email; $(".js-a-mailrow", sec).hidden = false; }
+  var ol = $(".js-a-deals", sec);
+  (s.deals || []).forEach(function (x) {
+    var li = document.createElement("li");
+    li.innerHTML = "<time></time><div class='d-main'><b></b><span></span></div><em class='st'></em>";
+    li.querySelector("time").textContent = x.date; li.querySelector("b").textContent = x.project + " · " + x.unit; li.querySelector("span").textContent = x.client;
+    var e = li.querySelector(".st"); e.textContent = x.status; e.style.fontStyle = "normal"; if (x.pending) e.classList.add("pending");
+    ol.appendChild(li);
+  });
+  var hasDeals = !!(s.deals && s.deals.length);
+  $(".deals:not(.js-a-help)", sec).hidden = !hasDeals;
+  $(".js-a-help", sec).hidden = hasDeals;
+}
+$(".js-copy").addEventListener("click", function () {
+  var btn = this, txt = contact.phone;
+  function done() { btn.textContent = "Đã sao chép " + prettyPhone(txt); }
+  try { navigator.clipboard.writeText(txt).then(done, function () { btn.textContent = prettyPhone(txt); }); } catch (e) { btn.textContent = prettyPhone(txt); }
+});
+
+/* ---- group selects ---- */
+$$(".js-groupsel").forEach(function (sel) {
+  GROUPS.forEach(function (g) { var o = document.createElement("option"); o.value = g[0]; o.textContent = g[1]; sel.appendChild(o); });
+});
+
+/* ---- unit selects (form) ---- */
+function unitLabel(u) { var r = vndRange(u.tt * GIA_THUONG * 1.07e6, (u.ttMax || u.tt) * GIA_THUONG * 1.07e6); return "Căn " + u.name + " · " + m2(u.tt, u.ttMax) + " m² · tổng " + (/^khoảng/.test(r) ? r : "khoảng " + r); }
+$$(".js-unitsel").forEach(function (sel) {
+  var o = document.createElement("option"); o.value = ""; o.textContent = "Chưa chọn, cần tư vấn thêm"; sel.appendChild(o);
+  UNITS.forEach(function (u, i) { var o = document.createElement("option"); o.value = String(i); o.textContent = unitLabel(u); sel.appendChild(o); });
+});
+function setFormUnit(i) { $$(".js-unitsel").forEach(function (s) { s.value = String(i); }); }
+
+/* ---- tabs (mặt bằng) ---- */
+$$('.tabs[data-group="mb"] .tab').forEach(function (t) {
+  t.addEventListener("click", function () {
+    $$('.tabs[data-group="mb"] .tab').forEach(function (x) { x.setAttribute("aria-selected", x === t ? "true" : "false"); $("#" + x.dataset.panel).hidden = x !== t; });
+  });
+});
+
+/* ---- units ---- */
+var unitTabs = $(".js-unit-tabs"), cUnit = $("#c-unit"), currentUnit = 1;
+UNITS.forEach(function (u, i) {
+  var b = document.createElement("button"); b.className = "tab"; b.type = "button"; b.setAttribute("role", "tab");
+  b.textContent = "Căn " + u.name + " · " + m2(u.tt, u.ttMax) + " m²"; b.addEventListener("click", function () { showUnit(i); }); unitTabs.appendChild(b);
+});
+CALC_UNITS.forEach(function (c, i) { var o = document.createElement("option"); o.value = i; o.textContent = "Căn " + c.name + " · " + m2(c.tt) + " m² thông thủy"; cUnit.appendChild(o); });
+function showUnit(i) {
+  currentUnit = i; var u = UNITS[i], hi = u.ttMax || u.tt;
+  $$(".tab", unitTabs).forEach(function (b, k) { b.setAttribute("aria-selected", k === i ? "true" : "false"); });
+  var img = $(".js-unit-img"); img.src = u.img; img.alt = "Mặt bằng 3D căn " + u.name;
+  $(".js-unit-name").textContent = "Căn " + u.name;
+  $(".js-unit-share").textContent = "Tầng 2-9 tòa O, P, Q, R, T: " + u.share;
+  $(".js-unit-tt").innerHTML = m2(u.tt, u.ttMax) + " <span class=\"u\">m²</span>";
+  $(".js-unit-tim").innerHTML = m2(u.tim, u.timMax) + " <span class=\"u\">m²</span>";
+  var nt = $(".js-unit-note"); nt.textContent = u.note || ""; nt.hidden = !u.note;
+  var lo = u.tt * GIA_THUONG * 1e6, h = hi * GIA_THUONG * 1e6;
+  $(".js-unit-price").textContent = vndRange(lo, h);
+  $(".js-unit-total").textContent = vndRange(lo * 1.07, h * 1.07);
+  $(".js-unit-own").textContent = vndRange(lo * (1.07 - 1.05 * 0.8), h * (1.07 - 1.05 * 0.8));
+}
+$(".js-unit-calc").addEventListener("click", function () { cUnit.value = currentUnit === 0 ? 0 : 2; calc(); setFormUnit(currentUnit); });
+showUnit(1); cUnit.value = 2;
+
+/* ---- calculator ---- */
+var plan = "loan";
+$$(".seg button").forEach(function (b) {
+  b.addEventListener("click", function () { plan = b.dataset.plan; $$(".seg button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); }); calc(); });
+});
+["#c-unit", "#c-price", "#c-ltv", "#c-rate", "#c-years"].forEach(function (s) { $(s).addEventListener("input", calc); $(s).addEventListener("change", calc); });
+var lastCalc = "";
+function calc() {
+  var c = CALC_UNITS[+cUnit.value], p = parseFloat($("#c-price").value);
+  var base = c.tt * p * 1e6, vat = base * .05, maint = base * .02, gross = base + vat, total = gross + maint;
+  $("#o-base").textContent = vnd(base); $("#o-tax").textContent = vnd(vat + maint); $("#o-total").textContent = vnd(total);
+  var ltv = plan === "loan" ? +$("#c-ltv").value / 100 : 0; $("#c-ltv-out").textContent = Math.round(+$("#c-ltv").value) + "%";
+  var loanAmt = gross * ltv, own = total - loanAmt;
+  $(".js-loanbox").hidden = plan !== "loan"; $(".js-monthly").hidden = plan !== "loan";
+  var html = "<tr><td>Giá trị hợp đồng (gồm VAT)</td><td>100%</td><td>" + vnd(gross) + "</td></tr>";
+  if (plan === "loan") html += "<tr class='bank'><td>Ngân hàng cho vay</td><td>" + Math.round(ltv * 100) + "%</td><td>" + vnd(loanAmt) + "</td></tr>";
+  html += "<tr><td>Vốn tự có cần chuẩn bị" + (plan === "loan" ? " (gồm 2% bảo trì)" : " (gồm 2% bảo trì)") + "</td><td>" + Math.round(own / gross * 100) + "%</td><td>" + vnd(own) + "</td></tr>";
+  $("#o-rows").innerHTML = html;
+  var m = "";
+  if (plan === "loan") {
+    var rate = Math.max(0, parseFloat($("#c-rate").value) || 0) / 1200, n = Math.min(300, Math.max(12, Math.round((parseFloat($("#c-years").value) || 25) * 12)));
+    var first = loanAmt / n + loanAmt * rate;
+    $("#o-month").textContent = vnd(first) + "/tháng";
+    m = ", vay " + Math.round(ltv * 100) + "% (" + vnd(loanAmt) + "), tháng đầu góp khoảng " + vnd(first);
+  }
+  var pName = { "15.990253": "căn thường", "16.310058": "căn góc", "15.670448": "căn cạnh thang" }[$("#c-price").value] || "";
+  lastCalc = "Căn " + c.name + " " + c.tt + " m² " + pName + ", tổng " + vnd(total) + ", tự có " + vnd(own) + m;
+}
+$(".js-send-calc").addEventListener("click", function () { var n = $("#f-note"); n.value = lastCalc; setFormUnit(CALC_UNITS[+cUnit.value].u); setTimeout(function () { $("#f-name").focus({ preventScroll: true }); }, 400); trackC("GuiBangTinh", { can: CALC_UNITS[+cUnit.value].name, cach: plan }); });
+function doTinh() { DA_TINH = true; trackSau("TinhDongTien", { can: CALC_UNITS[+cUnit.value].name, cach: plan }); }
+["#c-unit", "#c-price", "#c-ltv", "#c-rate", "#c-years"].forEach(function (s) { $(s).addEventListener("input", doTinh); });
+$$(".seg button").forEach(function (b) { b.addEventListener("click", doTinh); });
+$(".js-unit-calc").addEventListener("click", doTinh);
+var DA_TINH = false;
+calc();
+
+/* ---- eligibility ---- */
+var INCOME_GROUPS = { "5": 1, "6": 1, "8": 1, "7": 1 };
+var DOCS_COMMON = ["Mẫu 01: Đơn đăng ký mua, thuê, thuê mua nhà ở xã hội", "Căn cước, giấy tờ hôn nhân, thông tin thành viên hộ"];
+var DOCS_NHA = { none: "Mẫu 02: Xác nhận chưa có nhà ở, Văn phòng đăng ký đất đai xác nhận trong 7 ngày", small: "Mẫu 03: Xác nhận có nhà dưới 15 m² sàn/người, UBND cấp xã nơi có nhà xác nhận trong 7 ngày", far: "Giấy chứng minh khoảng cách từ nhà tới nơi làm việc theo Quyết định 28/2025/QĐ-UBND, chuyên viên hướng dẫn theo thông báo của chủ đầu tư" };
+var DOCS = {
+  "6": ["Mẫu 01a: Giấy chứng minh đối tượng, thu nhập (có hợp đồng lao động, nơi làm việc ký)"],
+  "5": ["Có hợp đồng lao động: Mẫu 01a, nơi làm việc ký", "Không có hợp đồng lao động, không hưởng lương hưu: Mẫu 05, Công an xã xác nhận trong 7 ngày"],
+  "8": ["Mẫu 01a: Giấy chứng minh đối tượng, thu nhập, nơi làm việc ký"],
+  "7": ["Giấy xác nhận đối tượng trong Quân đội hoặc Công an", "Mẫu 04: Giấy xác nhận thu nhập, đơn vị xác nhận"],
+  "9": ["Mẫu 01: Giấy xác nhận đối tượng"],
+  "10": ["Mẫu 01: Giấy xác nhận đối tượng (bị thu hồi đất)"],
+  "1": ["Giấy tờ chứng minh người có công, thân nhân liệt sĩ"],
+  "2": ["Giấy chứng nhận hộ nghèo, cận nghèo"], "3": ["Giấy chứng nhận hộ nghèo, cận nghèo"], "4": ["Giấy chứng nhận hộ nghèo, cận nghèo"]
+};
+var qGroup = $("#q-group");
+function evalElig() {
+  var g = qGroup.value, h = ($('input[name="q-house"]:checked') || {}).value, mar = ($('input[name="q-mar"]:checked') || {}).value;
+  var inc = parseFloat($("#q-income").value);
+  var needInc = !!INCOME_GROUPS[g];
+  $(".js-incq").hidden = !needInc && g !== "";
+  var v = $(".js-verdict");
+  if (!g) { return paint("", "Chưa có kết quả", "Trả lời các câu bên cạnh", "<p class='fine'>Bắt đầu từ câu 1.</p>"); }
+  if (g === "x") return paint("warn", "Cần kiểm tra thêm", "Chưa thấy nhóm phù hợp trong danh sách", "<p>Chuyên viên xem giúp trường hợp cụ thể của anh/chị, chưa kết luận. Có thể xem thêm trường hợp người thân (bố mẹ, vợ/chồng) đứng tên nếu người đó đủ điều kiện.</p>");
+  if (g === "13") return paint("warn", "Cần kiểm tra thêm", "Nhóm có từ 02 con đẻ trở lên", "<p>Luật Dân số 2025 cho nhóm này được ưu tiên từ 01/07/2026. Bộ Xây dựng chưa hướng dẫn có xét nhà ở, thu nhập hay không. Nếu anh/chị cũng thuộc nhóm khác ở trên thì nên đứng đơn theo nhóm đó.</p>");
+  if (!h) return paint("", "Đang kiểm tra", "Còn câu 2 về nhà ở", "<p class='fine'>Chọn tình trạng nhà ở của anh/chị.</p>");
+  if (h === "enough") return paint("bad", "Chưa đủ điều kiện về nhà ở", "Diện tích nhà hiện có vượt mức", "<p>Có nhà với bình quân từ 15 m² sàn/người trở lên thì chưa đủ điều kiện về nhà ở, trừ trường hợp nhà ở xa nơi làm việc. Diện tích tính theo các thành viên cùng hộ (vợ/chồng, bố mẹ, con).</p>");
+  if (needInc) {
+    if (!mar || !isFinite(inc)) return paint("", "Đang kiểm tra", "Còn câu 3 về thu nhập", "<p class='fine'>Chọn tình trạng hôn nhân và nhập thu nhập.</p>");
+    if (g === "7") return paint("warn", "Cần kiểm tra thêm", "Mức trần theo lương Đại tá", "<p>Với lực lượng vũ trang, trần thu nhập tính theo tổng thu nhập cấp hàm Đại tá. Chuyên viên sẽ đối chiếu bảng lương cụ thể.</p>" + docs(g));
+    var cap = mar === "married" ? 50 : mar === "single-kid" ? 35 : 25;
+    if (inc > cap) return paint("bad", "Chưa đủ điều kiện thu nhập để mua", "Thu nhập vượt trần " + cap + " triệu/tháng", "<p>Trần thu nhập cho trường hợp của anh/chị là " + cap + " triệu/tháng (thu nhập bình quân thực nhận 12 tháng gần nhất, Nghị định 136/2026). Nếu thu nhập dao động, chuyên viên sẽ xem lại cách tính. Vượt trần vẫn có thể thuê nhà ở xã hội: thuê không xét nhà ở và thu nhập (khoản 2 Điều 78 Luật Nhà ở 2023); thuê mua thì xét như mua.</p>");
+  }
+  paint("ok", "Có thể đủ điều kiện (sơ bộ)", "Anh/chị có thể chuẩn bị hồ sơ", "<p>Kết quả sơ bộ theo câu trả lời, chuyên viên rà lại hồ sơ cụ thể trước khi nộp. Cần thêm: chưa từng mua, thuê mua nhà ở xã hội và chưa hưởng chính sách hỗ trợ nhà ở tại Bắc Ninh." + (g === "2" || g === "3" ? " Nhóm hộ nghèo, cận nghèo nông thôn và vùng thiên tai tùy điều kiện địa phương, chuyên viên kiểm tra." : "") + "</p><p>Giấy tờ cần chuẩn bị để nộp cho chủ đầu tư trong đợt 15/11 đến 15/12/2026:</p>" + docs(g));
+  function docs(g) { var l = DOCS_COMMON.slice(0, 1).concat(DOCS_NHA[h] ? [DOCS_NHA[h]] : [], DOCS_COMMON.slice(1), DOCS[g] || []); return "<ul>" + l.map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ul><p class='fine'>Giấy xác nhận có giá trị 12 tháng. Mẫu 02, Mẫu 03, Mẫu 05 xác nhận trong 7 ngày, nên xin sớm.</p><a class='btn btn-red js-elig-send' href='#dang-ky' style='justify-self:start'>Gửi kết quả cho chuyên viên</a>"; }
+  function paint(s, badge, t, html) {
+    v.className = "verdict js-verdict " + s;
+    v.innerHTML = roleize("<span class='badge'>" + badge + "</span><h3></h3>" + html);
+    v.querySelector("h3").textContent = t;
+    if (s) trackSau("KiemTraDieuKien", { ket_qua: s === "ok" ? "du" : s === "warn" ? "can_kiem_tra" : "chua_du", nhom: g });
+    var b = v.querySelector(".js-elig-send");
+    if (b) b.addEventListener("click", function () { $("#f-group").value = g; $("#f-note").value = ketQuaKiemTra(); trackC("GuiKetQuaKiemTra", { ket_qua: s }); });
+  }
+}
+qGroup.addEventListener("change", evalElig);
+$$('input[name="q-house"],input[name="q-mar"]').forEach(function (r) { r.addEventListener("change", evalElig); });
+$("#q-income").addEventListener("input", evalElig);
+evalElig();
+
+/* ---- cau tra loi trong 2 cong cu: tu gui kem khi khach dien bat ky form nao (tru so thu nhap) ---- */
+var NHA_O = { none: "Chưa có nhà", small: "Có nhà, dưới 15 m² sàn/người", far: "Có nhà nhưng xa nơi làm việc (20 km)", enough: "Có nhà, từ 15 m² sàn/người trở lên" };
+var HON_NHAN = { single: "Độc thân", "single-kid": "Độc thân, nuôi con", married: "Đã kết hôn" };
+function ketQuaKiemTra() {
+  var g = qGroup.value; if (!g) return "";
+  var v = $(".js-verdict"), xong = /\b(ok|warn|bad)\b/.test(v.className);
+  var h = ($('input[name="q-house"]:checked') || {}).value, m = ($('input[name="q-mar"]:checked') || {}).value;
+  return "Kiểm tra điều kiện: " + (xong ? $(".badge", v).textContent + (/\bok\b/.test(v.className) ? "" : " (" + $("h3", v).textContent + ")") : "chưa làm xong")
+    + " | Nhóm: " + groupLabel(g) + (h ? " | Nhà ở: " + NHA_O[h] : "") + (m && INCOME_GROUPS[g] ? " | Hôn nhân: " + HON_NHAN[m] : "");
+}
+function traLoiKem(ghi) {
+  var them = [ketQuaKiemTra(), DA_TINH && lastCalc ? "Bảng tính: " + lastCalc : ""]
+    .filter(function (x) { return x && ghi.indexOf(x.replace(/^Bảng tính: /, "")) < 0; });
+  return [ghi].concat(them).filter(Boolean).join(" · ");
+}
+
+/* ---- form chua noi Google Sheet: an o nhap, chi de nut Goi va Zalo ---- */
+if (!LEAD_ENDPOINT) $$(".js-lead").forEach(function (f) {
+  $$(".field,.row2,button[type=submit],.form-msg,.fine", f).forEach(function (e) { e.hidden = true; });
+  var d = document.createElement("div"); d.className = "noform";
+  d.innerHTML = "<p>Gọi hoặc nhắn Zalo để chuyên viên kiểm tra điều kiện và tư vấn hồ sơ đợt 15/11 đến 15/12.</p><a class='btn btn-red' href='tel:" + contact.phone + "'>Gọi " + prettyPhone(contact.phone) + "</a><a class='btn btn-gold' href='https://zalo.me/" + (contact.zalo || contact.phone) + "' target='_blank' rel='noopener'>Nhắn Zalo</a>";
+  f.appendChild(d);
+});
+/* ---- lead forms ---- */
+$$(".js-lead").forEach(function (f) {
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var msg = $(".form-msg", f), btn = $("button[type=submit]", f);
+    var name = f.elements["name"].value.trim(), phone = f.elements["phone"].value.replace(/[^\d+]/g, "").replace(/^\+84/, "0");
+    function show(cls, t) { msg.className = "form-msg show " + cls; msg.textContent = t; }
+    if (name.length < 2) { f.elements["name"].focus(); return show("err", "Anh/chị vui lòng nhập họ tên."); }
+    if (!/^0\d{9}$/.test(phone)) { f.elements["phone"].focus(); return show("err", "Số điện thoại chưa đúng. Nhập 10 số, bắt đầu bằng 0."); }
+    var data = {
+      project: PROJECT, name: name, phone: phone, need: f.elements["need"] ? f.elements["need"].value : "", group: f.elements["group"] && f.elements["group"].value ? groupLabel(f.elements["group"].value) : qGroup.value ? groupLabel(qGroup.value) : "",
+      unit: (function () { var s = f.elements["unit"]; if (!s || s.value === "") return "Chưa chọn"; var u = UNITS[+s.value]; return "Căn " + u.name + " " + m2(u.tt, u.ttMax) + " m²"; })(),
+      note: traLoiKem(f.elements["note"] ? f.elements["note"].value.trim() : ""), sale: saleCode, saleName: sale ? sale.name : "", form: f.dataset.form,
+      utm_source: NGUON.src, utm_campaign: NGUON.camp, page: NGUON.page
+    };
+    if (!LEAD_ENDPOINT) { return show("info", "Anh/chị gọi hoặc nhắn Zalo " + prettyPhone(contact.phone) + " để được tư vấn ngay."); }
+    btn.disabled = true; btn.textContent = "Đang gửi...";
+    var hen = new AbortController(); setTimeout(function () { hen.abort(); }, 20000);
+    fetch(LEAD_ENDPOINT, { method: "POST", signal: hen.signal, headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(data) })
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        if (!res || !res.ok || !res.id) throw new Error("chua-ghi");
+        if (!res.trung) track("Lead", { content_name: "Cat Tuong Smart City" });
+        f.reset(); show("ok", roleize("Đã nhận thông tin nhờ tư vấn của " + name + " (mã " + res.id + "). Chuyên viên sẽ gọi lại số " + prettyPhone(phone) + " sớm nhất. Đây không phải đơn mua: đơn Mẫu 01 nộp cho chủ đầu tư.")); })
+      .catch(function () { show("err", "Chưa gửi được, thông tin anh/chị nhập vẫn giữ nguyên. Anh/chị bấm gửi lại, hoặc gọi " + prettyPhone(contact.phone) + "."); })
+      .then(function () { btn.disabled = false; btn.textContent = "Gửi thông tin nhờ tư vấn"; });
+  });
+});
+
+/* ---- lightbox ---- */
+var lb = $(".lb"), lbImg = $("img", lb);
+$$(".js-zoom").forEach(function (el) {
+  el.addEventListener("click", function () { var src = el.dataset.src || el.getAttribute("src"); var im = el.tagName === "IMG" ? el : $("img", el); lbImg.src = src; lbImg.alt = im ? im.alt : ""; lb.classList.add("show"); $("button", lb).focus(); });
+});
+function closeLb() { lb.classList.remove("show"); lbImg.removeAttribute("src"); }
+lb.addEventListener("click", function (e) { if (e.target !== lbImg) closeLb(); });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
+</script>
+
+</body>
+</html>

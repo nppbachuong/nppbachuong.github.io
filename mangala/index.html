@@ -9,7 +9,7 @@
 <meta property="og:description" content="Mangala Complex, phường Tiền Phong, Bắc Ninh: căn hộ và shophouse, khoảng giá quỹ căn đặc biệt và công cụ tính khoản vay. Tư vấn: Quang Giang 0348 558 888.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nppbachuong.github.io/mangala/">
-<meta property="og:image" content="https://nppbachuong.github.io/trangchinh/img/anh-2.jpg">
+<meta property="og:image" content="https://nppbachuong.github.io/mangala/img/phoi-canh.jpg">
 <style>
   :root{
     --navy:#0f1d33; --navy-2:#162945; --cream:#f3ede2; --cream-2:#ebe2d2;
@@ -117,6 +117,18 @@
   .steps li{list-style:none;counter-increment:s;display:flex;gap:14px;align-items:baseline;font-size:.9rem;color:var(--ink)}
   .steps li::before{content:counter(s,decimal-leading-zero);font-family:"Playfair Display",serif;color:var(--gold);font-size:1.05rem;flex:0 0 auto}
   @media (max-width:560px){ .hero{padding-block:52px 48px} .section .wrap{padding-block:40px} }
+  /* ảnh dự án (11/11/2026, lấy từ slide khởi công trong nhóm Zalo dự án) */
+  .hero-fig{margin:0 0 26px;border:1px solid var(--line-dark);background:#2a2f2a}
+  .hero-fig img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+  .hero-fig figcaption,.gal-note{font-size:.74rem;color:#9aa5bc;padding:8px 12px}
+  .gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:26px}
+  .gal figure{margin:0;background:var(--cream);border:1px solid var(--line);min-width:0}
+  .gal a{display:block}
+  .gal img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+  .gal figcaption{font-size:.8rem;color:var(--ink);padding:8px 10px}
+  .gal-note{color:var(--ink-soft);padding:10px 0 0}
+  @media (max-width:760px){ .gal{grid-template-columns:repeat(2,minmax(0,1fr))} .gal figure:first-child,.gal figure:last-child{grid-column:1/-1} }
+  @media (max-width:560px){ .hero-fig{margin-inline:calc(-1*clamp(20px,5vw,56px));border-inline:0} }
 
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -147,6 +159,10 @@ document.addEventListener("click", function (e) { var a = e.target.closest && e.
 <section class="hero">
   <div class="wrap">
     <a class="back" href="https://nppbachuong.github.io/trangchinh/" target="_blank" rel="noopener">&larr; Chọn Nhà Cùng Quang Giang</a>
+    <figure class="hero-fig">
+      <img src="img/phoi-canh.jpg" alt="Phối cảnh hai tòa tháp căn hộ và dãy shophouse Mangala Complex" width="1600" height="900" fetchpriority="high" decoding="async">
+      <figcaption>Phối cảnh dự án, hình ảnh minh họa của chủ đầu tư</figcaption>
+    </figure>
     <div class="eyebrow">Đang tư vấn · Phường Tiền Phong, Bắc Ninh</div>
     <h1>Mangala Complex</h1>
     <p class="sub">Industrial Hub Living &mdash; tổ hợp căn hộ và shophouse khép kín, hướng tới chuyên gia, kỹ sư làm việc trong các khu công nghiệp quanh vùng.</p>
@@ -198,6 +214,15 @@ document.addEventListener("click", function (e) { var a = e.target.closest && e.
         <p>Bàn giao nội thất liền tường theo tiêu chuẩn Ruby của chủ đầu tư.</p>
       </div>
     </div>
+    <div class="gal">
+      <figure><a href="img/pho-shophouse-ven-kenh.jpg" target="_blank" rel="noopener"><img src="img/pho-shophouse-ven-kenh.jpg" alt="Trục phố shophouse ven kênh" width="1200" height="670" loading="lazy" decoding="async"></a><figcaption>Trục phố shophouse ven kênh</figcaption></figure>
+      <figure><a href="img/pho-di-bo-ve-dem.jpg" target="_blank" rel="noopener"><img src="img/pho-di-bo-ve-dem.jpg" alt="Phố đi bộ ven kênh lên đèn buổi tối" width="1200" height="670" loading="lazy" decoding="async"></a><figcaption>Phố đi bộ buổi tối</figcaption></figure>
+      <figure><a href="img/cho-dem-le-hoi.jpg" target="_blank" rel="noopener"><img src="img/cho-dem-le-hoi.jpg" alt="Chợ đêm và lễ hội ẩm thực ven hồ" width="1200" height="670" loading="lazy" decoding="async"></a><figcaption>Chợ đêm, lễ hội ẩm thực</figcaption></figure>
+      <figure><a href="img/khong-gian-xanh-ven-kenh.jpg" target="_blank" rel="noopener"><img src="img/khong-gian-xanh-ven-kenh.jpg" alt="Hồ cảnh quan và lối dạo cây xanh ven kênh" width="1200" height="670" loading="lazy" decoding="async"></a><figcaption>Không gian cảnh quan, cây xanh</figcaption></figure>
+      <figure><a href="img/san-choi-the-thao.jpg" target="_blank" rel="noopener"><img src="img/san-choi-the-thao.jpg" alt="Sân chơi và sân thể thao ngoài trời" width="1200" height="670" loading="lazy" decoding="async"></a><figcaption>Không gian vui chơi, thể thao</figcaption></figure>
+      <figure><a href="img/song-va-lam-viec.jpg" target="_blank" rel="noopener"><img src="img/song-va-lam-viec.jpg" alt="Phòng tập và góc làm việc" width="1200" height="670" loading="lazy" decoding="async"></a><figcaption>Không gian sinh hoạt, làm việc chung</figcaption></figure>
+    </div>
+    <p class="gal-note">Hình ảnh minh họa trích từ tài liệu giới thiệu dự án của chủ đầu tư. Bấm vào ảnh để xem lớn.</p>
   </div>
 </section>
 

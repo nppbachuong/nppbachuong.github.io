@@ -179,7 +179,7 @@ h1{font-size:clamp(44px,7vw,84px);font-weight:700;letter-spacing:-.02em;color:#f
 .proj.wide{grid-column:1/-1;flex-direction:row}
 .proj.wide .proj-img{flex:0 0 46%;aspect-ratio:auto;min-height:100%;border-bottom:0;border-right:1px solid rgba(255,255,255,.14)}
 .proj.wide .proj-body{min-width:0}
-@media (max-width:960px){.proj.wide{flex-direction:column}.proj.wide .proj-img{flex:none;aspect-ratio:16/9;border-right:0;border-bottom:1px solid rgba(255,255,255,.14)}}
+@media (max-width:960px){.proj.wide{flex-direction:column}.proj.wide .proj-img{flex:none;aspect-ratio:16/9;min-height:0;border-right:0;border-bottom:1px solid rgba(255,255,255,.14)}}
 .rent{align-items:stretch}
 .rent-card{display:flex;flex-direction:column;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:4px;
   padding:28px 28px 26px;text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
@@ -637,7 +637,7 @@ footer a{color:rgba(255,255,255,.72)}
       </article>
 
       <article class="proj">
-        <div class="proj-img empty"><span>Ảnh phối cảnh đang cập nhật</span></div>
+        <div class="proj-img"><img src="img/parcville.jpg" alt="Phối cảnh Parc Ville" loading="lazy" decoding="async"></div>
         <div class="proj-body">
           <span class="badge">Nhà ở xã hội</span>
           <h3>Parc Ville</h3>
@@ -652,13 +652,13 @@ footer a{color:rgba(255,255,255,.72)}
         </div>
       </article>
 
-      <article class="proj wide">
+      <article class="proj">
         <div class="proj-img"><img src="img/anh-7.jpg" alt="Ảnh flycam nhà ở xã hội Cát Tường Smart City bên hồ" loading="lazy" decoding="async"></div>
         <div class="proj-body">
-          <span class="badge">Nhà ở xã hội · Nhận hồ sơ 15/11 – 15/12</span>
+          <span class="badge">Nhà ở xã hội</span>
           <h3>Cát Tường Smart City</h3>
           <div class="loc">Xã Yên Trung · Bắc Ninh</div>
-          <div class="kind">Căn hộ nhà ở xã hội · 2 ngủ, 3 ngủ</div>
+          <div class="kind">Căn hộ nhà ở xã hội · Nhận hồ sơ 15/11 – 15/12</div>
           <ul>
             <li>Chủ đầu tư Công ty CP Cát Tường, 1.040 căn; đợt mới 215 căn tại 7 tòa M1, M2, P, Q, R, S, T</li>
             <li>Giá Sở Xây dựng công khai 15,99 triệu/m² căn thường, chưa gồm VAT và phí bảo trì</li>
@@ -741,6 +741,81 @@ footer a{color:rgba(255,255,255,.72)}
       <h2>Video nổi bật</h2>
       <p>Xem trước dự án và góc nhìn thị trường trước khi bạn đi xem nhà thực tế.</p>
     </div>
+    <style>
+    .vfeat{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,260px);gap:26px;align-items:start;margin-bottom:40px}
+    .vngang{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start}
+    .vfeat figure{margin:0;display:flex;flex-direction:column;gap:12px;min-width:0}
+    .vplay{position:relative;border-radius:4px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:#000}
+    .vplay.ngang{aspect-ratio:16/9}
+    .vplay.doc{aspect-ratio:9/16}
+    .vplay button{all:unset;cursor:pointer;display:block;position:absolute;inset:0}
+    .vplay img{display:block;width:100%;height:100%;object-fit:cover}
+    .vplay .play{position:absolute;right:12px;bottom:12px;width:52px;height:52px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;font-size:19px;background:var(--gold);color:var(--navy-deep);
+      box-shadow:0 4px 18px rgba(0,0,0,.45)}
+    /* 3 khung kênh cũ không có video: bỏ khung trống, giữ chữ + nút dẫn sang kênh */
+    #video .grid3 .vframe{display:none}
+    #video .grid3 .stack{border-top:1px solid rgba(140,108,44,.35);padding-top:16px}
+    .vplay button:focus-visible{outline:2px solid var(--gold);outline-offset:-4px}
+    .vplay iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .vfeat figcaption{display:flex;flex-direction:column;gap:8px}
+    .vfeat h3{font-size:clamp(17px,1.9vw,20px);line-height:1.35}
+    @media (max-width:960px){.vfeat{grid-template-columns:1fr;gap:30px}.vfeat .vdoc{max-width:300px;width:100%;justify-self:center}}
+    @media (max-width:600px){.vngang{grid-template-columns:1fr;gap:30px}}
+    @media print{.vfeat{display:none}}
+    </style>
+    <div class="vfeat">
+      <div class="vngang">
+      <figure>
+        <div class="vplay ngang" data-yt="fJX4bIbW2pk">
+          <button type="button" aria-label="Phát video: 3 triệu tiền trọ mỗi tháng, bạn đang mất cả 1 căn nhà">
+            <img src="img/video-noi-bat.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="play">▶</span>
+          </button>
+        </div>
+        <figcaption>
+          <div class="eyebrow">YouTube · Video nổi bật</div>
+          <h3>3 triệu tiền trọ mỗi tháng. Bạn có tin, bạn đang mất cả 1 căn nhà</h3>
+          <a class="vlink" href="https://youtu.be/fJX4bIbW2pk" target="_blank" rel="noopener">Xem trên YouTube</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="vplay ngang" data-yt="V7b1TbNgREE">
+          <button type="button" aria-label="Phát video: Hồ sơ mua nhà ở xã hội cần giấy tờ gì, xin ở đâu, ai xác nhận">
+            <img src="img/video-ho-so.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="play">▶</span>
+          </button>
+        </div>
+        <figcaption>
+          <div class="eyebrow">YouTube</div>
+          <h3>Hồ sơ mua nhà ở xã hội cần giấy tờ gì? Xin ở đâu, ai xác nhận?</h3>
+          <a class="vlink" href="https://youtu.be/V7b1TbNgREE" target="_blank" rel="noopener">Xem trên YouTube</a>
+        </figcaption>
+      </figure>
+      </div>
+      <figure class="vdoc">
+        <div class="vplay doc" data-yt="hVTNYSFLCqs">
+          <button type="button" aria-label="Phát video: 11 nhóm đối tượng được mua nhà ở xã hội 2026">
+            <img src="img/video-shorts.jpg" alt="" width="540" height="960" loading="lazy" decoding="async"><span class="play">▶</span>
+          </button>
+        </div>
+        <figcaption>
+          <div class="eyebrow">YouTube Shorts</div>
+          <h3>11 nhóm đối tượng được mua nhà ở xã hội 2026 – bạn thuộc nhóm nào?</h3>
+          <a class="vlink" href="https://youtube.com/shorts/hVTNYSFLCqs" target="_blank" rel="noopener">Xem trên YouTube</a>
+        </figcaption>
+      </figure>
+    </div>
+    <script>
+    document.querySelectorAll('.vplay[data-yt]').forEach(function(box){
+      var b=box.querySelector('button'); if(!b) return;
+      b.addEventListener('click',function(){
+        var id=box.getAttribute('data-yt'), f=document.createElement('iframe');
+        f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&playsinline=1';
+        f.title=b.getAttribute('aria-label'); f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen'; f.allowFullscreen=true;
+        box.innerHTML=''; box.appendChild(f);
+        try{ if(typeof trackC==='function') trackC('XemVideo',{video:id}); }catch(e){}
+      });
+    });
+    </script>
     <div class="grid3">
       <div class="stack g14">
         <a class="vframe" href="https://www.youtube.com/@Chonnhacungquanggiang" target="_blank" rel="noopener" aria-label="Xem video trên YouTube">
@@ -760,14 +835,41 @@ footer a{color:rgba(255,255,255,.72)}
         <h4 style="font-size:19px">Góc nhìn nhanh 60 giây về thị trường</h4>
         <a class="vlink" href="https://www.tiktok.com/@nguyenquanggiang.bds" target="_blank" rel="noopener">Xem thêm trên TikTok</a>
       </div>
-      <div class="stack g14">
-        <a class="vframe" href="https://www.facebook.com/profile.php?id=61578406556491" target="_blank" rel="noopener" aria-label="Xem video trên Facebook">
-          <span class="play">▶</span>
-          <span class="vframe-lab">Facebook</span>
-        </a>
-        <div class="eyebrow">Facebook</div>
-        <h4 style="font-size:19px">Livestream giải đáp pháp lý &amp; tài chính</h4>
-        <a class="vlink" href="https://www.facebook.com/profile.php?id=61578406556491" target="_blank" rel="noopener">Xem thêm trên Facebook</a>
+      <div class="stack g14 fbcard">
+        <div class="vplay doc" data-fb="1495348669095176">
+          <button type="button" aria-label="Phát video: Vay ngân hàng, chuẩn bị tài chính thế nào?">
+            <img src="img/video-facebook-tai-chinh.jpg" alt="" width="540" height="960" loading="lazy" decoding="async"><span class="play">▶</span>
+          </button>
+        </div>
+        <div class="fbtxt">
+          <div class="eyebrow">Facebook · Livestream giải đáp tài chính</div>
+          <h3>Vay ngân hàng, chuẩn bị tài chính thế nào?</h3>
+          <p>Đủ điều kiện rồi thì cần sẵn bao nhiêu tiền, lương thấp gom tiền thế nào, thuê trọ hay mua trả góp lợi hơn, từng trả góp trễ có ảnh hưởng khoản vay không. Quang Giang trả lời liền một lúc trong buổi livestream hỏi đáp nhà ở xã hội.</p>
+          <a class="vlink" href="https://www.facebook.com/1051364884724918/videos/1495348669095176/" target="_blank" rel="noopener">Xem trên Facebook</a>
+        </div>
+        <style>
+        #video .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+        #video .grid3 .stack.fbcard{grid-column:1/-1;order:-1;display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);
+          gap:34px;align-items:center;border-top:0;padding-top:0;max-width:880px;width:100%;margin:0 auto 14px}
+        #video .fbcard .fbtxt{display:flex;flex-direction:column;gap:12px}
+        #video .fbcard h3{font-size:clamp(20px,2.4vw,26px);line-height:1.3}
+        #video .fbcard p{color:var(--ink-2);font-size:16px}
+        @media (max-width:700px){#video .grid3{grid-template-columns:1fr}
+          #video .grid3 .stack.fbcard{grid-template-columns:1fr;gap:18px}#video .fbcard .vplay{max-width:300px;width:100%;justify-self:center}}
+        @media print{#video .fbcard .vplay{display:none}}
+        </style>
+        <script>
+        document.querySelectorAll('.vplay[data-fb]').forEach(function(box){
+          var b=box.querySelector('button'); if(!b) return;
+          b.addEventListener('click',function(){
+            var id=box.getAttribute('data-fb'), f=document.createElement('iframe');
+            f.src='https://www.facebook.com/plugins/video.php?href='+encodeURIComponent('https://www.facebook.com/1051364884724918/videos/'+id+'/')+'&show_text=false&autoplay=true&width=300';
+            f.title=b.getAttribute('aria-label'); f.allow='autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share; fullscreen'; f.allowFullscreen=true;
+            box.innerHTML=''; box.appendChild(f);
+            try{ if(typeof trackC==='function') trackC('XemVideo',{video:'fb-'+id}); }catch(e){}
+          });
+        });
+        </script>
       </div>
     </div>
   </div>
@@ -916,12 +1018,41 @@ footer a{color:rgba(255,255,255,.72)}
       <p>Hình ảnh và video ký hợp đồng, lễ bàn giao, lễ tân gia và phản hồi của khách hàng đã làm việc cùng tôi.</p>
     </div>
 
-    <div class="moments">
-      <div class="mo big">
-        <span class="ring">▶</span>
-        <b>Video phản hồi<br>khách hàng</b>
-        <span>Đang cập nhật</span>
+    <style>
+    .khv{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:34px;align-items:center;max-width:880px;margin:0 auto 34px}
+    .khv .vplay.bb{aspect-ratio:3/4}
+    .khv .vplay.doc{aspect-ratio:9/16}
+    .khv .txt{display:flex;flex-direction:column;gap:12px}
+    .khv h3{font-size:clamp(20px,2.4vw,26px);line-height:1.3}
+    .khv .txt p{color:var(--ink-2);font-size:16px}
+    @media (max-width:700px){.khv{grid-template-columns:1fr;gap:18px}.khv .vplay{max-width:300px;width:100%;justify-self:center}}
+    @media print{.khv{display:none}}
+    </style>
+    <div class="khv">
+      <div class="vplay bb" data-tt="7700130301166554388">
+        <button type="button" aria-label="Phát video: cảm xúc của khách khi ưng căn view hồ, nhà ở xã hội Vân Trung">
+          <img src="img/video-khach-ba.jpg" alt="" width="486" height="648" loading="lazy" decoding="async"><span class="play">▶</span>
+        </button>
       </div>
+      <div class="txt">
+        <div class="eyebrow">Video phản hồi khách hàng · TikTok</div>
+        <h3>Ưng căn view hồ, chưa mất đồng nào: cảm xúc của khách</h3>
+        <p>Bạn Ba, sinh năm 1994, vừa làm xong định danh bước 2 nhà ở xã hội Vân Trung Soul Center, chia sẻ cảm nghĩ sau khi chọn được căn hướng Tây Nam nhìn ra hồ điều hòa.</p>
+        <a class="vlink" href="https://www.tiktok.com/@nguyenquanggiang.bds/video/7700130301166554388" target="_blank" rel="noopener">Xem trên TikTok</a>
+      </div>
+    </div>
+    <script>
+    document.querySelectorAll('.vplay[data-tt]').forEach(function(box){
+      var b=box.querySelector('button'); if(!b) return;
+      // 11/11/2026: khung nhúng TikTok báo "Server error" với video này (tài khoản có thể đang tắt cho phép nhúng) → bấm mở thẳng TikTok
+      b.addEventListener('click',function(){
+        var id=box.getAttribute('data-tt');
+        try{ if(typeof trackC==='function') trackC('XemVideo',{video:'tiktok-'+id}); }catch(e){}
+        window.open('https://www.tiktok.com/@nguyenquanggiang.bds/video/'+id,'_blank','noopener');
+      });
+    });
+    </script>
+    <div class="moments">
       <div class="mo">
         <span class="ring">✎</span>
         <b>Ký hợp đồng</b>
@@ -980,7 +1111,6 @@ footer a{color:rgba(255,255,255,.72)}
     <p style="font-family:var(--disp);font-size:23px;color:#fff">Nguyễn Quang Giang</p>
     <p>Chuyên viên tư vấn lựa chọn bất động sản · Bắc Giang · Bắc Ninh</p>
     <p><b><a href="tel:+84348558888" data-tel style="text-decoration:none">0348 558 888</a></b> · <a href="mailto:nguyenquanggiang.bds@gmail.com">nguyenquanggiang.bds@gmail.com</a></p>
-    <p>Địa chỉ văn phòng — đang cập nhật</p>
     <div class="socs">
       <a href="https://www.youtube.com/@Chonnhacungquanggiang" target="_blank" rel="noopener">YouTube · @Chonnhacungquanggiang</a>
       <a href="https://www.tiktok.com/@nguyenquanggiang.bds" target="_blank" rel="noopener">TikTok · @nguyenquanggiang.bds</a>
